@@ -1,0 +1,1009 @@
+/* ----------------- MOBILE FIRST ----------------- */
+
+body {
+  font-family: Bebas Neue;
+}
+
+@media screen and (min-width: 0px) and (max-width:450px){
+
+/* ----------------- NAVBAR MOBILE ----------------- */
+
+body {
+  font-size: 12px;
+}
+
+.grid-navbar { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(68, 8, 8);
+}
+
+h1{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 35px;
+  color: antiquewhite;
+  text-align: center;
+  }
+
+a {
+  text-decoration: none;
+}
+
+.lista-flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+.lista-flex li{
+    font-family: 'Bebas Neue', cursive;
+    list-style: none;
+    color: whitesmoke;
+    margin: 2px;
+    
+}
+
+li a{
+  color: rgb(226, 211, 211);
+}
+
+
+/* ----------------- INDEX MOBILE----------------- */
+
+body {
+  background-color: black;
+}
+
+.grid-index {  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 0.5fr 0.5fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "grid-navbar"
+    "moustache-logo"
+    "grid-cards"
+    "grid-footer"
+    "textosfooter";
+  background-color: black;
+}
+
+
+.moustache-logo { 
+  grid-area: moustache-logo; 
+  display: flex;
+  justify-content: center;
+}
+
+.moustache-logo img{
+  height: 20em;
+  width: 45em;
+}
+
+.grid-cards {  
+  display: flex;
+  flex-direction: column;
+  grid-area: grid-cards;
+  justify-items: center;
+  gap: 4em;
+}
+
+.grid-cards img{
+  height: 200px;
+  width: 200px;
+}
+
+.card1-grid { 
+  grid-area: card1-grid;
+  display: flex;
+  justify-content: center; 
+}
+
+/* ----------------- CATALOGO MOBILE ----------------- */
+
+.container-catalogo {  
+  background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg);
+  display: grid;
+  grid-template-columns: 0.2fr 2.6fr 0.2fr;
+  grid-template-rows: 0.6fr 0.4fr 3fr 0.4fr 2fr 0.3fr 0.3fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 30px 30px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". grid-navbar ."
+    ". titulo1 ."
+    ". grid-catalogo ."
+    ". titulo2 ."
+    ". catalogoExtra ."
+    ". grid-footer ."
+    ". textosfooter .";
+}
+
+
+.titulo1 {
+  display: flex;
+  justify-content: space-around; 
+  grid-area: titulo1;
+  text-align: center;
+  color: yellow;
+  background-color: black;
+  margin-top: 1cm;
+  margin-bottom: 1cm; 
+}
+
+.titulo1 img{
+  visibility: hidden;
+}
+
+.grid-catalogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  grid-area: grid-catalogo; 
+  gap: 70px;
+}
+
+.birra{
+  display: flex;
+  justify-content: center;
+}
+
+.grid-catalogo img{
+  width: 230px;
+  height: 350px;
+  justify-content: center;
+}
+
+.titulo2 {
+  display: flex;
+  justify-content: space-around; 
+  grid-area: titulo2;
+  text-align: center;
+  color: yellow;
+  background-color: black;
+  margin-top: 1cm;
+  margin-bottom: 1cm; 
+}
+
+.titulo2 img{
+    visibility: hidden;
+  }
+
+.catalogoExtra { 
+  display: flex;
+  flex-direction: column;
+  grid-area: catalogoExtra;
+  gap: 70px;
+ }
+
+.catalogoExtra img{
+    width: 250px;
+    height: 250px;
+    justify-content: center;
+  }
+
+.tragos-flex{ 
+  display: flex;
+  justify-content: center;}
+
+
+/* ----------------- PROMOCIONES MOBILE ----------------- */
+
+
+
+
+/* ----------------- NOSOTROS MOBILE ----------------- */
+
+
+
+
+/* ----------------- CONTACTO MOBILE ----------------- */
+
+
+
+
+/* ----------------- FOOTER MOBILE ----------------- */
+
+.grid-footer { 
+  grid-area: grid-footer;
+  background-color: rgb(68, 8, 8); 
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(53, 6, 6);
+  font-family: 'Bebas Neue', cursive;
+  color: antiquewhite;
+}
+
+
+.grid-footer img{
+  width: 50px;
+  height: 50px;
+  margin: 7px;
+}
+
+
+.flex-icons{
+  display:flex;
+  justify-content: center;
+  margin-bottom: 1cm;
+}
+
+.flex-icons img:hover{
+  width: 60px;
+  height: 60px;
+}
+
+
+.buscanos{
+  text-align: center;
+  font-size: 25px;
+}
+
+.textosfooter{
+  grid-area: textosfooter;
+  display: flex;
+  background-color: rgb(39, 3, 3);
+  grid-area: textosfooter;
+  font-family: 'Bebas Neue', cursive;
+  color: antiquewhite;
+  text-align: center;
+}
+
+
+#enlaceWa{
+  visibility: hidden;
+}
+}
+
+/* ----------------- TABLET RESPONSIVE ----------------- */
+
+@media screen and (min-width: 451px) and (max-width:1024px){
+
+/* ----------------- NAVBAR TABLET ----------------- */
+
+.grid-navbar { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(68, 8, 8);
+  text-align: center;
+}
+
+h1{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 50px;
+  color: antiquewhite;
+  }
+
+a {
+  text-decoration: none;
+}
+
+.lista-flex{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.lista-flex li{
+    font-family: 'Bebas Neue', cursive;
+    list-style: none;
+    color: whitesmoke;
+    margin: 2px;
+    
+    
+}
+
+li a{
+  color: rgb(226, 211, 211);
+}
+
+
+/* ----------------- INDEX TABLET ----------------- */
+
+body{
+  background-color: black;
+}
+
+.grid-index {
+  background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg);
+  display: grid;
+  grid-template-columns: 0.2fr 2.6fr 0.2fr;
+  grid-template-rows: 0.4fr 2fr 2.2fr 0.2fr 0.2fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 30px 30px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". grid-navbar ."
+    ". moustache-logo ."
+    ". grid-cards ."
+    ". grid-footer ."
+    ". textosfooter .";
+  background-color: black;
+}
+
+
+.moustache-logo { 
+  grid-area: moustache-logo; 
+  display: flex;
+  justify-content: center;
+  margin-top: 1cm;
+}
+
+.moustache-logo img{
+  height: 300px;
+  width: 650px;
+}
+
+.grid-cards {
+  display: flex;
+  flex-direction: column;
+  grid-area: grid-cards;
+  justify-items: center;
+  margin-top: 1cm;
+  gap: 70px;
+}
+
+.grid-cards img{
+  height: 300px;
+  width: 300px;
+}
+
+.card1-grid { 
+  grid-area: card1-grid;
+  display: flex;
+  justify-content: center; 
+}
+
+
+
+/* ----------------- CATALOGO TABLET ----------------- */
+
+.container-catalogo { 
+  background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg);
+  display: grid;
+  grid-template-columns: 0.2fr 2.6fr 0.2fr;
+  grid-template-rows: 0.6fr 0.4fr 3fr 0.4fr 2fr 0.3fr 0.3fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 30px 30px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". grid-navbar ."
+    ". titulo1 ."
+    ". grid-catalogo ."
+    ". titulo2 ."
+    ". catalogoExtra ."
+    ". grid-footer ."
+    ". textosfooter .";
+}
+
+
+.titulo1 {
+  display: flex;
+  justify-content: space-around; 
+  grid-area: titulo1;
+  text-align: center;
+  color: yellow;
+  background-color: black;
+  margin-top: 1cm;
+  margin-bottom: 1cm; 
+}
+
+.titulo1 img{
+  visibility: hidden;
+}
+
+.grid-catalogo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center; 
+  grid-area: grid-catalogo; 
+  gap: 50px;
+}
+
+.birra{
+  display: flex;
+  justify-content: center;
+}
+
+.grid-catalogo img{
+  width: 230px;
+  height: 350px;
+  justify-content: center;
+}
+
+.titulo2 {
+  display: flex;
+  justify-content: space-around; 
+  grid-area: titulo2;
+  text-align: center;
+  color: yellow;
+  background-color: black;
+  margin-top: 1cm;
+  margin-bottom: 1cm; 
+}
+
+.titulo2 img{
+    visibility: hidden;
+  }
+
+.catalogoExtra { 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-area: catalogoExtra;
+ }
+
+.catalogoExtra img{
+    width: 250px;
+    height: 250px;
+    justify-content: center;
+  }
+
+.tragos-flex{ 
+  display: flex;
+  justify-content: center;}
+
+
+/* ----------------- PROMOCIONES TABLET ----------------- */
+
+
+
+/* ----------------- NOSOTROS TABLET ----------------- */
+
+
+
+/* ----------------- CONTACTO TABLET ----------------- */
+
+
+
+
+/* ----------------- FOOTER TABLET ----------------- */
+
+.grid-footer { 
+  grid-area: grid-footer;
+  background-color: rgb(68, 8, 8); 
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(53, 6, 6);
+  font-family: 'Bebas Neue', cursive;
+  color: antiquewhite;
+}
+
+
+.grid-footer img{
+  width: 50px;
+  height: 50px;
+  margin: 7px;
+}
+
+
+.flex-icons{
+  display:flex;
+  justify-content: center;
+  margin-bottom: 1cm;
+}
+
+.flex-icons img:hover{
+  width: 60px;
+  height: 60px;
+}
+
+
+.buscanos{
+  text-align: center;
+  font-size: 25px;
+}
+
+.textosfooter{
+  grid-area: textosfooter;
+  display: flex;
+  background-color: rgb(39, 3, 3);
+  grid-area: textosfooter;
+  font-family: 'Bebas Neue', cursive;
+  color: antiquewhite;
+  justify-content: center;
+  text-align: center;
+}
+
+
+#enlaceWa{
+  visibility: hidden;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------- DESKTOP RESPONSIVE -----------------*/
+
+@media (min-width: 1025px){
+
+/* ----------------- NAVBAR DESKTOP ----------------- */
+
+  .grid-navbar { 
+      grid-area: grid-navbar;
+      background-color: rgb(68, 8, 8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 200px;
+      margin-top: -15px;
+      margin-right: -25px;
+      
+      }
+
+  .lista-flex{
+      display: flex;
+      align-items: center;
+      margin-left: 30px;
+      list-style-type: none;
+  }
+
+
+  .lista-flex li{
+      font-size: 25px;
+      margin-right: 30px;
+      margin-left: 30px;
+      font-family: 'Bebas Neue', cursive; 
+  }
+
+  li a{
+      color: rgb(226, 211, 211);
+  }
+
+
+  li a:hover{
+      color: yellow;
+  }
+
+  h1{
+      font-family: 'Bebas Neue', cursive;
+      font-size: 70px;
+      color: antiquewhite;
+      }
+
+  h1:hover{
+  font-size: 80px;
+  }
+
+
+  a{
+      text-decoration:none
+  }
+
+  h2{
+      font-family: 'Bebas Neue', cursive;
+  }
+
+  .logo-flex{
+      margin-left: 2cm;
+  }
+
+  /* ----------------- INDEX DESKTOP ----------------- */
+
+
+  #grid-index {  
+    display: grid;
+    grid-template-columns: 0.2fr 2.6fr 0.2fr;
+    grid-template-rows: 0.4fr 2fr 2.2fr 0.2fr 0.2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "grid-navbar grid-navbar grid-navbar"
+      "moustache-logo moustache-logo moustache-logo"
+      ". grid-cards ."
+      "grid-footer grid-footer grid-footer"
+      "textosfooter textosfooter textosfooter";
+    }
+
+    .moustache-logo {
+      margin-top: 1cm; 
+      grid-area: moustache-logo;
+      display:flex;
+      justify-content: center;
+    }
+    
+    .grid-cards {  
+      display: flex;
+      flex-wrap: wrap;
+      grid-area: grid-cards;
+      justify-content: center;
+      gap: 70px;
+    }
+      
+      
+    body {
+        background-color: black;
+    }
+    
+    
+    .moustache-logo {
+      margin-top: 1cm; 
+      grid-area: moustache-logo;
+      display:flex;
+      justify-content: center;
+    }
+
+    .moustache-logo img{
+      width: 1400px;
+      height: 600px;
+    }
+    
+    
+    .grid-cards img{
+      width: 300px;
+      height: 300px;
+    }
+
+
+  /* ----------------- CATALOGO DESKTOP ----------------- */
+
+.colorAmarillo{
+    color: yellow;
+}
+
+#container-catalogo { 
+    background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg);
+    background-size: 150%; 
+    display: grid;
+    grid-template-columns: 0.2fr auto 0.2fr;
+    grid-template-rows: 0.2fr auto auto auto;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    text-align: center;
+    grid-template-areas:
+      "grid-navbar grid-navbar grid-navbar"
+      "titulo1 titulo1 titulo1"
+      ". grid-catalogo ."
+      "titulo2 titulo2 titulo2"
+      ". catalogoExtra ."
+      "grid-footer grid-footer grid-footer"
+      "textosfooter textosfooter textosfooter";
+  }
+
+  .titulo1{
+      display:flex;
+      grid-area: titulo1;
+      background-color: black;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 1cm;
+      margin-bottom: 15px;
+  }
+
+  .titulo1 img{
+      width: 8cm;
+      height: 10px;
+  }
+
+  .titulo2{
+    display:flex;
+      grid-area: titulo2;
+      background-color: black;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 15px;
+      margin-bottom: 15px;
+}
+
+.grid-catalogo { 
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-area: grid-catalogo;
+  gap: 60px;
+  margin: 30px;
+  
+  }
+  
+.grid-catalogo img{
+  width: 230px;
+  height: 380px;
+}
+.catalogoExtra{
+  display: flex;
+  grid-area: catalogoExtra;
+  justify-content: center;
+  gap: 60px;
+  
+}
+.catalogoExtra img{
+    width: 300px;
+    height: 300px;
+}
+.grid-catalogo img:hover{
+  width: 250px;
+  height: 400px;
+}
+.catalogoExtra img:hover{
+    width: 320px;
+    height: 320px;;
+}
+
+
+
+
+/* ----------------- PROMOCIONES DESKTOP ----------------- */
+
+.container { 
+  background-color: black; 
+  display: grid;
+  grid-template-columns: 0.2fr 1.9fr 0.2fr;
+  grid-template-rows: 0.2fr 2.3fr 0.5fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "grid-navbar grid-navbar grid-navbar"
+    ". grid-main ."
+    "grid-footer grid-footer grid-footer"
+    "textosfooter textosfooter textosfooter";
+}
+
+
+.grid-main {  
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+gap: 0px 0px;
+grid-auto-flow: row;
+grid-template-areas:
+  "box1 box2 box3"
+  "box4 box5 box6";
+grid-area: grid-main;
+justify-content: center;
+justify-items: center;
+align-items: center;
+margin-top: 1cm;
+}
+
+.grid-main img{
+  width: 300px;
+  height: 300px;
+}
+
+.grid-main img:hover{
+  width: 350px;
+  height: 350px;
+}
+
+.box1 { 
+  grid-area: box1;
+  display:grid;
+  justify-content: center; 
+}
+
+.box2 { 
+  grid-area: box2;
+  display:grid;
+  justify-content: center;
+   
+}
+
+.box3 { 
+  grid-area: box3;
+  display:grid;
+  justify-content: center;  
+}
+
+.box4 { 
+  grid-area: box4;
+  background-color: yellow;
+}
+
+.box5 { 
+  grid-area: box5; 
+  background-color:pink;
+}
+
+.box6 { 
+  grid-area: box6;
+  background-color: red;
+}
+
+
+/* ----------------- NOSOTROS DESKTOP ----------------- */
+
+#bodyNosotros {
+  background-image: url(https://fondosmil.com/fondo/2780.jpg);
+  background-size: 100%;
+}
+
+#grid-nosotros { 
+  display: grid;
+  grid-template-columns: 0.2fr 1.9fr 0.2fr;
+  grid-template-rows: 0.4fr auto auto auto auto auto auto 0.2fr 0.2fr;
+  grid-auto-columns: 1fr;
+  gap: 16px 16px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "grid-navbar grid-navbar grid-navbar"
+    ". main-nosotros ."
+    ". main-nosotros ."
+    ". main-nosotros ."
+    ". main-nosotros ."
+    ". main-nosotros ."
+    ". main-nosotros ."
+    "grid-footer grid-footer grid-footer"
+    "textosfooter textosfooter textosfooter";
+}
+
+
+.main-nosotros {  
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 100px 16px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "nosotros1 textoNosotros1"
+    "nosotros2 textoNosotros2"
+    "nosotros3 textoNosotros3"
+    "nosotros4 textoNosotros4"
+    "nosotros5 textoNosotros5"
+    "maps maps";
+  grid-area: main-nosotros;
+  color: rgb(59, 9, 9);
+  font-family: Bebas Neue;
+  align-items: center;
+  justify-items: center;
+  margin-top: 1cm;
+}
+
+.maps { 
+  grid-area: maps;
+}
+
+.nosotros1 { 
+  grid-area: nosotros1; 
+}
+
+.nosotros2 { 
+  grid-area: nosotros2;
+}
+
+.nosotros3 { 
+  grid-area: nosotros3; 
+}
+
+.nosotros4 { 
+  grid-area: nosotros4; 
+}
+
+.nosotros5 { 
+  grid-area: nosotros5; 
+}
+
+.textoNosotros1 { 
+  grid-area: textoNosotros1;
+}
+
+.textoNosotros2 { 
+  grid-area: textoNosotros2; 
+}
+
+.textoNosotros3 { 
+  grid-area: textoNosotros3; 
+}
+
+.textoNosotros4 { 
+  grid-area: textoNosotros4; 
+}
+
+.textoNosotros5 { 
+  grid-area: textoNosotros5; 
+}
+
+
+/* ----------------- CONTACTO DESKTOP ----------------- */
+  
+.grid-contacto {  display: grid;
+  grid-template-columns: 0.4fr 2.4fr 0.4fr;
+  grid-template-rows: 0.4fr 2.6fr 0.2fr 0.2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "grid-navbar grid-navbar grid-navbar"
+    ". contacto-main ."
+    "grid-footer grid-footer grid-footer"
+    "textosfooter textosfooter textosfooter";
+}
+
+
+.contacto-main { 
+  grid-area: contacto-main;
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 30px; 
+}
+
+#formulario1{
+  color: darkseagreen;
+}
+
+/* ----------------- FOOTER DESKTOP ----------------- */
+
+  .grid-footer { 
+      grid-area: grid-footer;
+      background-color: rgb(68, 8, 8); 
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(53, 6, 6);
+      margin-top: 100px;
+      margin-left: -30px;
+      margin-right: -30px;
+      font-family: 'Bebas Neue', cursive;
+      color: antiquewhite;
+    }
+
+
+  .grid-footer img{
+      width: 50px;
+      height: 50px;
+      margin: 7px;
+  }
+
+    
+  .flex-icons{
+      display:flex;
+      justify-content: center;
+      margin-bottom: 1cm;
+  }
+
+  .flex-icons img:hover{
+      width: 60px;
+      height: 60px;
+  }
+
+
+  .buscanos{
+      text-align: center;
+      font-size: 25px;
+  }
+
+  .textosfooter{
+      grid-area: textosfooter;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(39, 3, 3);
+      grid-area: textosfooter;
+      font-family: 'Bebas Neue', cursive;
+      color: antiquewhite;
+      margin-left: -30px;
+      margin-right: -30px;
+      margin-bottom: -30px;
+  }
+
+
+  #enlaceWa{
+      font-size: 60px;
+      position: fixed;
+      bottom: 0;
+      right: 30px;
+  }
+
+  #enlaceWa img:hover{
+      width: 90px;
+      height: 90px;
+  }
+}
