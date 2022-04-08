@@ -1,7 +1,12 @@
 /* ----------------- MOBILE FIRST ----------------- */
 
 body {
-  font-family: Bebas Neue;
+   font-family: Bebas Neue;
+   overflow-x: hidden
+}
+
+.moustache-logo{
+  overflow-x: hidden;
 }
 
 @media screen and (min-width: 0px) and (max-width:450px){
@@ -17,11 +22,12 @@ body {
   flex-direction: column;
   justify-content: center;
   background-color: rgb(68, 8, 8);
+  margin: -10px -10px 0px -10px;
 }
 
 h1{
   font-family: 'Bebas Neue', cursive;
-  font-size: 35px;
+  font-size: 55px;
   color: antiquewhite;
   text-align: center;
   }
@@ -54,26 +60,8 @@ body {
   background-color: black;
 }
 
-.grid-index {  
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 0.5fr 0.5fr;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "grid-navbar"
-    "moustache-logo"
-    "grid-cards"
-    "grid-footer"
-    "textosfooter";
-  background-color: black;
-}
 
-
-.moustache-logo { 
-  grid-area: moustache-logo; 
+.moustache-logo {  
   display: flex;
   justify-content: center;
 }
@@ -86,7 +74,6 @@ body {
 .grid-cards {  
   display: flex;
   flex-direction: column;
-  grid-area: grid-cards;
   justify-items: center;
   gap: 4em;
 }
@@ -97,42 +84,25 @@ body {
 }
 
 .card1-grid { 
-  grid-area: card1-grid;
   display: flex;
   justify-content: center; 
 }
 
 /* ----------------- CATALOGO MOBILE ----------------- */
 
-.container-catalogo {  
+.container-catalogo { 
   background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg);
-  display: grid;
-  grid-template-columns: 0.2fr 2.6fr 0.2fr;
-  grid-template-rows: 0.6fr 0.4fr 3fr 0.4fr 2fr 0.3fr 0.3fr;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  gap: 30px 30px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". grid-navbar ."
-    ". titulo1 ."
-    ". grid-catalogo ."
-    ". titulo2 ."
-    ". catalogoExtra ."
-    ". grid-footer ."
-    ". textosfooter .";
 }
-
 
 .titulo1 {
   display: flex;
-  justify-content: space-around; 
-  grid-area: titulo1;
+  justify-content: center; 
   text-align: center;
   color: yellow;
   background-color: black;
   margin-top: 1cm;
-  margin-bottom: 1cm; 
+  margin-bottom: 1cm;
+  overflow-x: hidden; 
 }
 
 .titulo1 img{
@@ -143,7 +113,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center; 
-  grid-area: grid-catalogo; 
   gap: 70px;
 }
 
@@ -156,17 +125,18 @@ body {
   width: 230px;
   height: 350px;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 .titulo2 {
   display: flex;
-  justify-content: space-around; 
-  grid-area: titulo2;
+  justify-content: center; 
   text-align: center;
   color: yellow;
   background-color: black;
   margin-top: 1cm;
-  margin-bottom: 1cm; 
+  margin-bottom: 1cm;
+  overflow-x: hidden;  
 }
 
 .titulo2 img{
@@ -176,46 +146,194 @@ body {
 .catalogoExtra { 
   display: flex;
   flex-direction: column;
-  grid-area: catalogoExtra;
-  gap: 70px;
+  gap: 4em;
  }
 
 .catalogoExtra img{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     justify-content: center;
   }
 
 .tragos-flex{ 
   display: flex;
-  justify-content: center;}
+  justify-content: center;
+  margin-bottom: 70px;
+}
 
 
 /* ----------------- PROMOCIONES MOBILE ----------------- */
 
 
+.grid-main {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 60px;
+  margin: 30px;
+}
+
+.grid-main img{
+  width: 200px;
+  height: 200px;
+}
+
+.box1 { 
+  display:grid;
+  justify-content: center; 
+}
+
 
 
 /* ----------------- NOSOTROS MOBILE ----------------- */
 
+#bodyNosotros {
+  background-image: url(https://fondosmil.com/fondo/2780.jpg);
+  background-size: 100%;
+}
 
+.main-nosotros {  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "nosotros1 textoNosotros1 textoNosotros1"
+    "textoNosotros2 textoNosotros2 nosotros2"
+    "nosotros3 textoNosotros3 textoNosotros3"
+    "textoNosotros4 textoNosotros4 nosotros4"
+    "nosotros5 textoNosotros5 textoNosotros5"
+    "maps maps maps";
+  grid-area: main-nosotros;
+  margin-top: 2cm;
+}
+
+.main-nosotros img{
+  width: 150px;
+  height: 150px;
+
+}
+
+.nosotros1 { 
+  grid-area: nosotros1;
+  display: flex;
+  align-items: center;
+  height: 50%; 
+}
+
+.textoNosotros1 { 
+  grid-area: textoNosotros1;
+  display: flex;
+  align-items: center;
+  height: 50%; 
+  margin-left: 20px;
+}
+
+.nosotros2 { 
+  grid-area: nosotros2;
+  display: flex;
+  align-items: center;
+  height: 50%;
+   
+}
+
+.textoNosotros2 { 
+  grid-area: textoNosotros2;
+  display: flex;
+  align-items: center;
+  height: 50%;
+  margin-right: 20px;
+   
+}
+
+.nosotros3 { 
+  grid-area: nosotros3;
+  display: flex;
+  align-items: center;
+  height: 50%;
+   
+}
+
+.textoNosotros3 { 
+  grid-area: textoNosotros3;
+  display: flex;
+  align-items: center;
+  height: 50%;
+  margin-left: 20px; 
+  
+}
+
+.nosotros4 { 
+  grid-area: nosotros4;
+  display: flex;
+  align-items: center;
+  height: 50%;
+   
+}
+
+.textoNosotros4 { 
+  grid-area: textoNosotros4;
+  display: flex;
+  align-items: center;
+  height: 50%;
+  margin-right: 20px;
+   
+}
+
+.nosotros5 { 
+  grid-area: nosotros5; 
+  display: flex;
+  align-items: center;
+  height: 50%;
+  
+}
+
+.textoNosotros5 { 
+  grid-area: textoNosotros5;
+  display: flex;
+  align-items: center;
+  height: 50%;
+  margin-left: 20px;
+   
+}
+
+.maps { 
+  grid-area: maps;
+  display: flex;
+  justify-content: center;
+}
 
 
 /* ----------------- CONTACTO MOBILE ----------------- */
 
+.contacto-main { 
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 30px; 
+}
+
+#formulario1{
+  color: darkseagreen;
+}
 
 
 
 /* ----------------- FOOTER MOBILE ----------------- */
 
 .grid-footer { 
-  grid-area: grid-footer;
   background-color: rgb(68, 8, 8); 
   display: flex;
   flex-direction: column;
   background-color: rgb(53, 6, 6);
   font-family: 'Bebas Neue', cursive;
   color: antiquewhite;
+  overflow-x: hidden;
+  margin: -10px -10px 0px -10px;
+}
+
+.grid-footer h2{
+  font-size: 30px;
 }
 
 
@@ -244,13 +362,19 @@ body {
 }
 
 .textosfooter{
-  grid-area: textosfooter;
   display: flex;
   background-color: rgb(39, 3, 3);
-  grid-area: textosfooter;
   font-family: 'Bebas Neue', cursive;
   color: antiquewhite;
   text-align: center;
+  overflow-x: hidden;
+  justify-content: center;
+  align-content: center;
+  margin: -10px -10px -10px -10px;
+}
+
+.textosfooter h5{
+  font-size: 9px;
 }
 
 
@@ -271,11 +395,12 @@ body {
   justify-content: center;
   background-color: rgb(68, 8, 8);
   text-align: center;
+  margin: -10px -10px 0px -10px;
 }
 
 h1{
   font-family: 'Bebas Neue', cursive;
-  font-size: 50px;
+  font-size: 65px;
   color: antiquewhite;
   }
 
@@ -308,27 +433,8 @@ body{
   background-color: black;
 }
 
-.grid-index {
-  background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg);
-  display: grid;
-  grid-template-columns: 0.2fr 2.6fr 0.2fr;
-  grid-template-rows: 0.4fr 2fr 2.2fr 0.2fr 0.2fr;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  gap: 30px 30px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". grid-navbar ."
-    ". moustache-logo ."
-    ". grid-cards ."
-    ". grid-footer ."
-    ". textosfooter .";
-  background-color: black;
-}
-
 
 .moustache-logo { 
-  grid-area: moustache-logo; 
   display: flex;
   justify-content: center;
   margin-top: 1cm;
@@ -342,7 +448,6 @@ body{
 .grid-cards {
   display: flex;
   flex-direction: column;
-  grid-area: grid-cards;
   justify-items: center;
   margin-top: 1cm;
   gap: 70px;
@@ -354,7 +459,6 @@ body{
 }
 
 .card1-grid { 
-  grid-area: card1-grid;
   display: flex;
   justify-content: center; 
 }
@@ -365,33 +469,17 @@ body{
 
 .container-catalogo { 
   background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg);
-  display: grid;
-  grid-template-columns: 0.2fr 2.6fr 0.2fr;
-  grid-template-rows: 0.6fr 0.4fr 3fr 0.4fr 2fr 0.3fr 0.3fr;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  gap: 30px 30px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". grid-navbar ."
-    ". titulo1 ."
-    ". grid-catalogo ."
-    ". titulo2 ."
-    ". catalogoExtra ."
-    ". grid-footer ."
-    ". textosfooter .";
 }
-
 
 .titulo1 {
   display: flex;
   justify-content: space-around; 
-  grid-area: titulo1;
   text-align: center;
   color: yellow;
   background-color: black;
   margin-top: 1cm;
-  margin-bottom: 1cm; 
+  margin-bottom: 1cm;
+  overflow-x: hidden; 
 }
 
 .titulo1 img{
@@ -401,8 +489,7 @@ body{
 .grid-catalogo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-content: center; 
-  grid-area: grid-catalogo; 
+  justify-content: center;  
   gap: 50px;
 }
 
@@ -420,12 +507,12 @@ body{
 .titulo2 {
   display: flex;
   justify-content: space-around; 
-  grid-area: titulo2;
   text-align: center;
   color: yellow;
   background-color: black;
   margin-top: 1cm;
-  margin-bottom: 1cm; 
+  margin-bottom: 1cm;
+  overflow-x: hidden; 
 }
 
 .titulo2 img{
@@ -435,7 +522,7 @@ body{
 .catalogoExtra { 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-area: catalogoExtra;
+  margin-bottom: 1cm;
  }
 
 .catalogoExtra img{
@@ -451,27 +538,167 @@ body{
 
 /* ----------------- PROMOCIONES TABLET ----------------- */
 
+.grid-main {  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 60px;
+  margin: 50px;
+}
 
+.grid-main img{
+  width: 200px;
+  height: 200px;
+}
+
+.box1 { 
+  display: flex;
+  justify-content: center; 
+}
 
 /* ----------------- NOSOTROS TABLET ----------------- */
 
+#bodyNosotros {
+  background-image: url(https://fondosmil.com/fondo/2780.jpg);
+  background-size: 100%;
+}
 
+.main-nosotros {  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "nosotros1 textoNosotros1 textoNosotros1"
+    "textoNosotros2 textoNosotros2 nosotros2"
+    "nosotros3 textoNosotros3 textoNosotros3"
+    "textoNosotros4 textoNosotros4 nosotros4"
+    "nosotros5 textoNosotros5 textoNosotros5"
+    "maps maps maps";
+  grid-area: main-nosotros;
+  margin-top: 3cm;
+}
+
+.main-nosotros img{
+  width: 250px;
+  height: 250px;
+
+}
+
+.nosotros1 { 
+  grid-area: nosotros1;
+  display: flex;
+  align-items: center;
+  height: 50%; 
+}
+
+.textoNosotros1 { 
+  grid-area: textoNosotros1;
+  display: flex;
+  align-items: center;
+  height: 50%; 
+  margin-left: 20px;
+}
+
+.nosotros2 { 
+  grid-area: nosotros2;
+  display: flex;
+  align-items: center;
+  height: 50%;
+   
+}
+
+.textoNosotros2 { 
+  grid-area: textoNosotros2;
+  display: flex;
+  align-items: center;
+  height: 50%;
+  margin-right: 20px;
+   
+}
+
+.nosotros3 { 
+  grid-area: nosotros3;
+  display: flex;
+  align-items: center;
+  height: 50%;
+   
+}
+
+.textoNosotros3 { 
+  grid-area: textoNosotros3;
+  display: flex;
+  align-items: center;
+  height: 50%;
+  margin-left: 20px; 
+  
+}
+
+.nosotros4 { 
+  grid-area: nosotros4;
+  display: flex;
+  align-items: center;
+  height: 50%;
+   
+}
+
+.textoNosotros4 { 
+  grid-area: textoNosotros4;
+  display: flex;
+  align-items: center;
+  height: 50%;
+  margin-right: 20px;
+   
+}
+
+.nosotros5 { 
+  grid-area: nosotros5; 
+  display: flex;
+  align-items: center;
+  height: 50%;
+  
+}
+
+.textoNosotros5 { 
+  grid-area: textoNosotros5;
+  display: flex;
+  align-items: center;
+  height: 50%;
+  margin-left: 20px;
+   
+}
+
+.maps { 
+  grid-area: maps;
+  display: flex;
+  justify-content: center;
+}
 
 /* ----------------- CONTACTO TABLET ----------------- */
 
+.contacto-main { 
+  grid-area: contacto-main;
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 30px; 
+}
 
+#formulario1{
+  color: darkseagreen;
+}
 
 
 /* ----------------- FOOTER TABLET ----------------- */
 
 .grid-footer { 
-  grid-area: grid-footer;
   background-color: rgb(68, 8, 8); 
   display: flex;
   flex-direction: column;
   background-color: rgb(53, 6, 6);
   font-family: 'Bebas Neue', cursive;
   color: antiquewhite;
+  margin: -10px -10px 0px -10px;
 }
 
 
@@ -500,14 +727,14 @@ body{
 }
 
 .textosfooter{
-  grid-area: textosfooter;
   display: flex;
   background-color: rgb(39, 3, 3);
-  grid-area: textosfooter;
   font-family: 'Bebas Neue', cursive;
   color: antiquewhite;
   justify-content: center;
+  align-content: center;
   text-align: center;
+  margin: -10px -10px -10px -10px;
 }
 
 
@@ -517,9 +744,6 @@ body{
 
 
 }
-
-
-
 
 
 
@@ -546,6 +770,7 @@ body{
       height: 200px;
       margin-top: -15px;
       margin-right: -25px;
+      margin-left: -25px;
       
       }
 
@@ -599,58 +824,58 @@ body{
   /* ----------------- INDEX DESKTOP ----------------- */
 
 
-  #grid-index {  
-    display: grid;
-    grid-template-columns: 0.2fr 2.6fr 0.2fr;
-    grid-template-rows: 0.4fr 2fr 2.2fr 0.2fr 0.2fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "grid-navbar grid-navbar grid-navbar"
-      "moustache-logo moustache-logo moustache-logo"
-      ". grid-cards ."
-      "grid-footer grid-footer grid-footer"
-      "textosfooter textosfooter textosfooter";
-    }
+#grid-index {  
+  display: grid;
+  grid-template-columns: 0.2fr 2.6fr 0.2fr;
+  grid-template-rows: 0.4fr 2fr 2.2fr 0.2fr 0.2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "grid-navbar grid-navbar grid-navbar"
+    "moustache-logo moustache-logo moustache-logo"
+    ". grid-cards ."
+    "grid-footer grid-footer grid-footer"
+    "textosfooter textosfooter textosfooter";
+  }
 
-    .moustache-logo {
-      margin-top: 1cm; 
-      grid-area: moustache-logo;
-      display:flex;
-      justify-content: center;
-    }
-    
-    .grid-cards {  
-      display: flex;
-      flex-wrap: wrap;
-      grid-area: grid-cards;
-      justify-content: center;
-      gap: 70px;
-    }
+.moustache-logo {
+  margin-top: 1cm; 
+  grid-area: moustache-logo;
+  display:flex;
+  justify-content: center;
+}
+
+.grid-cards {  
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: grid-cards;
+  justify-content: center;
+  gap: 70px;
+}
       
       
-    body {
-        background-color: black;
-    }
+body {
+    background-color: black;
+}
     
     
-    .moustache-logo {
-      margin-top: 1cm; 
-      grid-area: moustache-logo;
-      display:flex;
-      justify-content: center;
-    }
+.moustache-logo {
+  margin-top: 1cm; 
+  grid-area: moustache-logo;
+  display:flex;
+  justify-content: center;
+}
 
-    .moustache-logo img{
-      width: 1400px;
-      height: 600px;
-    }
+.moustache-logo img{
+  width: 1400px;
+  height: 600px;
+}
     
     
-    .grid-cards img{
-      width: 300px;
-      height: 300px;
-    }
+.grid-cards img{
+  width: 300px;
+  height: 300px;
+}
 
 
   /* ----------------- CATALOGO DESKTOP ----------------- */
@@ -659,12 +884,12 @@ body{
     color: yellow;
 }
 
-#container-catalogo { 
+.container-catalogo { 
     background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg);
     background-size: 150%; 
     display: grid;
     grid-template-columns: 0.2fr auto 0.2fr;
-    grid-template-rows: 0.2fr auto auto auto;
+    grid-template-rows: 0.2fr auto auto auto auto auto auto;
     grid-auto-columns: 1fr;
     gap: 0px 0px;
     text-align: center;
@@ -748,7 +973,7 @@ body{
   background-color: black; 
   display: grid;
   grid-template-columns: 0.2fr 1.9fr 0.2fr;
-  grid-template-rows: 0.2fr 2.3fr 0.5fr;
+  grid-template-rows: 0.2fr 2.3fr auto auto;
   grid-auto-columns: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -761,19 +986,12 @@ body{
 
 
 .grid-main {  
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-template-rows: 1fr 1fr;
-gap: 0px 0px;
-grid-auto-flow: row;
-grid-template-areas:
-  "box1 box2 box3"
-  "box4 box5 box6";
-grid-area: grid-main;
-justify-content: center;
-justify-items: center;
-align-items: center;
-margin-top: 1cm;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-area: grid-main;
+  gap: 60px;
+  margin: 30px;
 }
 
 .grid-main img{
@@ -792,33 +1010,6 @@ margin-top: 1cm;
   justify-content: center; 
 }
 
-.box2 { 
-  grid-area: box2;
-  display:grid;
-  justify-content: center;
-   
-}
-
-.box3 { 
-  grid-area: box3;
-  display:grid;
-  justify-content: center;  
-}
-
-.box4 { 
-  grid-area: box4;
-  background-color: yellow;
-}
-
-.box5 { 
-  grid-area: box5; 
-  background-color:pink;
-}
-
-.box6 { 
-  grid-area: box6;
-  background-color: red;
-}
 
 
 /* ----------------- NOSOTROS DESKTOP ----------------- */
@@ -828,20 +1019,16 @@ margin-top: 1cm;
   background-size: 100%;
 }
 
-#grid-nosotros { 
+.grid-nosotros {  
   display: grid;
-  grid-template-columns: 0.2fr 1.9fr 0.2fr;
-  grid-template-rows: 0.4fr auto auto auto auto auto auto 0.2fr 0.2fr;
+  grid-template-columns: 0.2fr 2.6fr 0.2fr;
+  grid-template-rows: 0.4fr auto 0.2fr 0.2fr;
   grid-auto-columns: 1fr;
-  gap: 16px 16px;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "grid-navbar grid-navbar grid-navbar"
-    ". main-nosotros ."
-    ". main-nosotros ."
-    ". main-nosotros ."
-    ". main-nosotros ."
-    ". main-nosotros ."
     ". main-nosotros ."
     "grid-footer grid-footer grid-footer"
     "textosfooter textosfooter textosfooter";
@@ -850,68 +1037,87 @@ margin-top: 1cm;
 
 .main-nosotros {  
   display: grid;
-  grid-template-columns: 0.7fr 1.3fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 100px 16px;
+  gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "nosotros1 textoNosotros1"
-    "nosotros2 textoNosotros2"
-    "nosotros3 textoNosotros3"
-    "nosotros4 textoNosotros4"
-    "nosotros5 textoNosotros5"
-    "maps maps";
+    "nosotros1 textoNosotros1 textoNosotros1"
+    "textoNosotros2 textoNosotros2 nosotros2"
+    "nosotros3 textoNosotros3 textoNosotros3"
+    "textoNosotros4 textoNosotros4 nosotros4"
+    "nosotros5 textoNosotros5 textoNosotros5"
+    "maps maps maps";
   grid-area: main-nosotros;
-  color: rgb(59, 9, 9);
-  font-family: Bebas Neue;
-  align-items: center;
-  justify-items: center;
-  margin-top: 1cm;
-}
-
-.maps { 
-  grid-area: maps;
+  margin-top: 2cm;
 }
 
 .nosotros1 { 
-  grid-area: nosotros1; 
-}
-
-.nosotros2 { 
-  grid-area: nosotros2;
-}
-
-.nosotros3 { 
-  grid-area: nosotros3; 
-}
-
-.nosotros4 { 
-  grid-area: nosotros4; 
-}
-
-.nosotros5 { 
-  grid-area: nosotros5; 
+  grid-area: nosotros1;
+  display: flex;
+  align-items: center; 
 }
 
 .textoNosotros1 { 
   grid-area: textoNosotros1;
+  display: flex;
+  align-items: center; 
+}
+
+.nosotros2 { 
+  grid-area: nosotros2;
+  display: flex;
+  align-items: center; 
 }
 
 .textoNosotros2 { 
-  grid-area: textoNosotros2; 
+  grid-area: textoNosotros2;
+  display: flex;
+  align-items: center; 
+}
+
+.nosotros3 { 
+  grid-area: nosotros3;
+  display: flex;
+  align-items: center; 
 }
 
 .textoNosotros3 { 
-  grid-area: textoNosotros3; 
+  grid-area: textoNosotros3;
+  display: flex;
+  align-items: center; 
+}
+
+.nosotros4 { 
+  grid-area: nosotros4;
+  display: flex;
+  align-items: center; 
 }
 
 .textoNosotros4 { 
-  grid-area: textoNosotros4; 
+  grid-area: textoNosotros4;
+  display: flex;
+  align-items: center; 
+}
+
+.nosotros5 { 
+  grid-area: nosotros5; 
+  display: flex;
+  align-items: center;
 }
 
 .textoNosotros5 { 
-  grid-area: textoNosotros5; 
+  grid-area: textoNosotros5;
+  display: flex;
+  align-items: center; 
 }
+
+.maps { 
+  grid-area: maps;
+  display: flex;
+  justify-content: center;
+}
+
 
 
 /* ----------------- CONTACTO DESKTOP ----------------- */
