@@ -759,6 +759,10 @@ body{
 
 @media (min-width: 1025px){
 
+#bodyIndex{
+  background-image: linear-gradient(to bottom, rgb(66, 3, 3), rgb(155, 16, 16));
+}
+
 /* ----------------- NAVBAR DESKTOP ----------------- */
 
   .grid-navbar { 
@@ -826,59 +830,61 @@ body{
 
 #grid-index {  
   display: grid;
-  grid-template-columns: 0.2fr 2.6fr 0.2fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 0.4fr 2fr 2.2fr 0.2fr 0.2fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "grid-navbar grid-navbar grid-navbar"
     "moustache-logo moustache-logo moustache-logo"
-    ". grid-cards ."
+    "grid-cards grid-cards grid-cards"
     "grid-footer grid-footer grid-footer"
     "textosfooter textosfooter textosfooter";
   }
 
 .moustache-logo {
-  margin-top: 1cm; 
+  margin-right: -1cm;
+  margin-left: -1cm; 
   grid-area: moustache-logo;
   display:flex;
   justify-content: center;
 }
 
-.grid-cards {  
+.grid-cards { 
   display: flex;
   flex-wrap: wrap;
   grid-area: grid-cards;
   justify-content: center;
   gap: 70px;
-}
-      
-      
-body {
-    background-color: black;
-}
-    
-    
-.moustache-logo {
-  margin-top: 1cm; 
-  grid-area: moustache-logo;
-  display:flex;
-  justify-content: center;
+  margin-top: 2cm;
 }
 
+.grid-cards img{
+  width: 300px;
+  height: 300px;
+  transition: height 2s, width 2s;
+}
+
+.grid-cards img:hover{
+  width: 400px;
+  height: 400px;
+}
+      
+    
 .moustache-logo img{
   width: 1400px;
   height: 600px;
 }
     
     
-.grid-cards img{
-  width: 300px;
-  height: 300px;
-}
+
 
 
   /* ----------------- CATALOGO DESKTOP ----------------- */
+
+#bodyCatalogo{
+  background-color: black;
+}
 
 .colorAmarillo{
     color: yellow;
@@ -943,6 +949,7 @@ body {
 .grid-catalogo img{
   width: 230px;
   height: 380px;
+  transition: height 1s, width 1s;
 }
 .catalogoExtra{
   display: flex;
@@ -954,6 +961,7 @@ body {
 .catalogoExtra img{
     width: 300px;
     height: 300px;
+    transition: height 1s, width 1s;
 }
 .grid-catalogo img:hover{
   width: 250px;
@@ -968,6 +976,10 @@ body {
 
 
 /* ----------------- PROMOCIONES DESKTOP ----------------- */
+
+#bodyPromo{
+  background-color: black;
+}
 
 .container { 
   background-color: black; 
@@ -1002,6 +1014,7 @@ body {
 .grid-main img:hover{
   width: 350px;
   height: 350px;
+  transition: height 1s, width 1s;
 }
 
 .box1 { 
