@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/favicon.png">
 
-    <link rel="stylesheet" href="https://raw.github.com/daneden/animate.css/master/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
-    <!-- <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/styles.css">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -19,118 +16,113 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <title>MOUSTACHE CERVECERÍA</title>
+    <title>Contacto</title>
 </head>
 
-<body>
-
-  <div class="grid-contacto">
-
-    <nav class="grid-navbar">
-      <div class="logo-flex">
-        <a href="../index.html">
-          <h1>MOUSTACHE</h1>
-        </a>
+<body id="bodyPromo">
+  
+  <nav class="navbar navbar-expand-xl navbar-dark bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../img/moustachelogo.png" alt="" width="100px">
+      </a>
+  
+     
+      <div id="lista" class="justify-content-end" id="navbarDark">
+        <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="../index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="catalogo.html">Catálogo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="promociones.html">Promociones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+    
       </div>
-
-      <div class="lista-navegacion">
-          <ul class="lista-flex">
-    
-            <li>
-              <a href="../index.html">Inicio</a>
-            </li>
-      
-            <li>
-              <a href="catalogo.html">Catálogo</a>
-            </li>
-      
-            <li>
-              <a href="promociones.html">Promociones</a>
-            </li>
-      
-            <li>
-                <a href="nosotros.html">Nosotros</a>
-            </li>
-      
-            <li>
-                <a href="contacto.html">Contacto</a>
-            </li>
-      
-          </ul>      
-      </div>
-    </nav>
-
-    <div class="contacto-main">
-      <form id="formulario1">
-
-        <h2 class="colorAmarillo textCenter">COMPLETE LOS DATOS</h2>
-
-        <fieldset>
-          <legend> <b> Datos personales </b> </legend>
-          <div>
-            <label for="nombre"> <b>Nombre</b> </label>
-            <input type="text" id="nombre" required placeholder="Ingresá tu nombre completo">
-          </div>
-    
-          <div>
-            <label for="e-mail"> <b>E-mail</b> </label>
-            <input type="email" id="e-mail">
-          </div>
-    
-          <div>
-            <label for="telefono"> <b>Teléfono</b> </label>
-            <input type="tel" id="telefono">
-          </div>
-        </fieldset>
-  
-        <br>
-        <br>
-  
-        <textarea name="" id="" cols="30" rows="10" placeholder="Escribinos tu consulta"></textarea>
-
-        <br>
-        <br>
-  
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Limpiar formulario">
     </div>
+  </nav>
 
 
-    <a href="https://web.whatsapp.com/" id="enlaceWa">
-      <img src="../img/wsp.png" alt="Icono WhatsApp" width="80px" height="80px">
+  <div class="contacto-main">
+    <form id="formulario1">
+
+      <h2 class="colorAmarillo textCenter">COMPLETE LOS DATOS</h2>
+
+      <fieldset>
+        <legend> <b> Datos personales </b> </legend>
+        <div>
+          <label for="nombre"> <b>Nombre</b> </label>
+          <input type="text" id="nombre" required placeholder="Ingresá tu nombre completo">
+        </div>
+  
+        <div>
+          <label for="e-mail"> <b>E-mail</b> </label>
+          <input type="email" id="e-mail" required placeholder="Ingresá tu e-mail">
+        </div>
+  
+        <div>
+          <label for="telefono"> <b>Teléfono</b> </label>
+          <input type="tel" id="telefono" required placeholder="Ingresá tu teléfono">
+        </div>
+      </fieldset>
+
+      <br>
+      <br>
+
+      <textarea name="" id="textContacto" placeholder="Escribinos tu consulta"></textarea>
+
+      <br>
+      <br>
+
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Limpiar formulario">
+  </div>
+
+
+<div class="grid-footer container-fluid">
+  <div class="buscanos">
+      <h2>Buscanos en nuestras redes</h2>
+  </div>
+
+  <div class="flex-icons">
+    <a href="https://www.facebook.com/moustacheBeerAG">
+      <img src="../img/fb.png" alt="logofacebook" width="50px" height="50px">
     </a>
 
-    <div class="grid-footer">
-      <div class="buscanos">
-          <h2>Buscanos en nuestras redes</h2>
-      </div>
-  
-      <div class="flex-icons">
-        <a href="https://www.facebook.com/moustacheBeerAG">
-          <img src="../img/fb.png" alt="logofacebook" width="50px" height="50px">
-        </a>
-  
-        <a href="https://www.instagram.com/moustachebeerag/">
-          <img src="../img/ig.png" alt="LogoInstagram" width="50px" height="50px">
-        </a>
-      </div>
-      </div>
-  
-
-    <div class="textosfooter">
-      <div class="texto-footer">
-          <h5>© 2022 Cervecería Moustache | Todos los derechos reservados. Av. Dalinger 282 - Alta Gracia - Córdoba - Argentina. </h5>
-          <h5>Beber con moderación. | Prohibida su venta a menores de 18 años.</h5>
-    </div>
-
+    <a href="https://www.instagram.com/moustachebeerag/">
+      <img src="../img/ig.png" alt="LogoInstagram" width="50px" height="50px">
+    </a>
   </div>
-  
+</div>
 
 
-  <script src="js/wow.min.js"></script>
-  <script>
-     new WOW().init();
-  </script>
+<div class="textosfooter container-fluid">
+  <div class="texto-footer">
+      <h5>© 2022 Cervecería Moustache | Todos los derechos reservados. Av. Dalinger 282 - Alta Gracia - Córdoba - Argentina. </h5>
+      <h5>Beber con moderación. | Prohibida su venta a menores de 18 años.</h5>
+</div>
+
+<a href="https://api.whatsapp.com/send/?phone=5493547653551&text&app_absent=0" id="enlaceWa">
+  <img src="../img/wsp.png" alt="Icono WhatsApp" width="80px" height="80px">
+</a>
+
+<script src="js/wow.min.js"></script>
+<script>
+   new WOW().init();
+</script>
+
+</body>
+
+</html>
   
 
 </body>
