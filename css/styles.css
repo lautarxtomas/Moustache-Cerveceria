@@ -10,17 +10,14 @@ body{
 
 /* --------------- NAVBAR --------------- */
 
-.navbar-brand{
-  margin-left: 30px;
-}
-
 .navbar-brand img:hover{
   width: 130px;
 }
 
-#lista{
-  font-size: 25px;
+.navbar{
+  font-size: 30px;
 }
+
 
 /* --------------- INDEX DESKTOP --------------- */
 
@@ -41,6 +38,7 @@ body{
   align-items: center;
   color: whitesmoke;
   opacity: 0.6;
+  margin-top: 20px;
 }
 
 .titulo h2{
@@ -86,6 +84,7 @@ width: 320px;
 height: 320px;;
 }
 
+
 /* ------------- PROMOCIONES DESKTOP  ------------- */
 
 #bodyPromo {
@@ -114,12 +113,13 @@ height: 320px;;
 }
 
 .card{
-  margin: 40px;
+  margin: 15px;
+  margin-top: 30px;
 }
 
 .card:hover{
   transform:scale(1.05);
-  transition: scale 1s;
+  
 }
 
 /* ------------- NOSOTROS DESKTOP  ------------- */
@@ -155,6 +155,7 @@ height: 320px;;
 .maps{
   margin: 20px;
 }
+
 
 
 /* ------------- CONTACTO DESKTOP  ------------- */
@@ -245,9 +246,18 @@ input::-webkit-input-placeholder {
 
 /* --------------- MOBILE RESPONSIVE --------------- */
 
-/* -------- CATALOGO MOBILE -------- */
+
 
 @media screen and (min-width: 0px) and (max-width:450px){
+
+
+/* -------- NAVBAR MOBILE -------- */
+
+  .navbar{
+    font-size: 16px;
+  }
+
+  /* -------- CATALOGO MOBILE -------- */
 
   .grid-catalogo {
     display: flex;
