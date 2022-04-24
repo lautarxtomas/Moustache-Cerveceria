@@ -1,0 +1,341 @@
+h1{
+    font-family: Bebas Neue;
+    color: rgb(53, 6, 6);
+  }
+  
+  body{
+    font-family: Bebas Neue;
+    overflow-x: hidden;
+}
+
+/* --------------- NAVBAR --------------- */
+
+.navbar{
+  font-size: 30px;
+    .navbar-brand img:hover {
+        width: 130px;
+  }
+}
+
+/* --------------- INDEX DESKTOP --------------- */
+
+#bodyIndex, #bodyContacto, #bodyCatalogo{
+  background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg);
+}
+
+/* --------------- CATALOGO DESKTOP --------------- */
+
+  .titulo{
+    display:flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    opacity: 0.6;
+    margin-top: 20px;
+        h2{
+            margin-top: 10px;
+        }
+  }
+  
+  .grid-catalogo { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-area: grid-catalogo;
+    gap: 60px;
+    margin: 30px;
+        img {
+            width: 230px;
+            height: 380px;
+            transition: height 1s, width 1s;
+        }
+        img:hover{
+            width: 250px;
+            height: 400px;
+            }
+  }
+  
+  .catalogoExtra{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    gap: 60px;
+        img {
+            width: 300px;
+            height: 300px;
+            transition: height 1s, width 1s;
+        }
+        img:hover{
+            width: 320px;
+            height: 320px;;
+        }
+  }
+
+/* ------------- PROMOCIONES DESKTOP  ------------- */
+
+#bodyPromo {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg);
+  }
+  
+  .grid-main {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 20px;
+
+    img{
+            width: 250px;
+            height: 250px;
+        }
+
+    img:hover{
+        width: 280px;
+        height: 280px;
+        transition: height 1s, width 1s;
+      }
+  }
+  
+  .card{
+    margin: 15px;
+    margin-top: 30px;
+
+    &:hover{
+        transform:scale(1.05);
+    }  
+  }
+  
+  
+  /* ------------- NOSOTROS DESKTOP  ------------- */
+  
+  #bodyNosotros {
+    background-image: linear-gradient(to left, rgb(231, 216, 216), rgb(165, 131, 131));
+  }
+  
+  .card1{
+    display: flex;
+    justify-content: center;
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+  }
+
+  .maps { 
+    grid-area: maps;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  /* ------------- CONTACTO DESKTOP  ------------- */
+  
+  .contacto-main { 
+    grid-area: contacto-main;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    margin-top: 1cm;
+    margin-bottom: 1cm; 
+
+    input::-webkit-input-placeholder {
+        font-size: 20px;
+        line-height: 3;
+      }
+
+      #formulario1{
+        color: darkseagreen;
+      }
+  }
+  
+  /* --------------- FOOTER GENERAL --------------- */
+  
+  .grid-footer { 
+    background-color: rgb(68, 8, 8); 
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(53, 6, 6);
+    font-family: 'Bebas Neue', cursive;
+    color: antiquewhite;
+
+    img{
+        width: 50px;
+        height: 50px;
+        margin: 7px;
+      }
+
+  }
+  
+  .flex-icons{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 1cm;
+
+    img:hover{
+        width: 60px;
+        height: 60px;   
+    }
+  }
+  
+  
+  .buscanos{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 1cm;
+  }
+  
+  .textosfooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(39, 3, 3);
+    font-family: 'Bebas Neue', cursive;
+    color: antiquewhite;
+    text-align: center;
+
+    .texto-footer{
+        margin-top: 0.5cm;
+        margin-bottom: 0.5cm;
+      }
+  }
+  
+  
+  #enlaceWa{
+    font-size: 60px;
+    position: fixed;
+    bottom: 0;
+    right: 30px;
+
+    img:hover{
+        width: 90px;
+        height: 90px;
+      }
+  }
+  
+  
+  /* --------------- MOBILE RESPONSIVE --------------- */
+  
+  @media screen and (min-width: 0px) and (max-width:450px){
+
+    #enlaceWa{
+        visibility: hidden;
+      }
+  
+  /* -------- NAVBAR MOBILE -------- */
+  
+    .navbar{
+      font-size: 16px;
+    }
+  
+    /* -------- CATALOGO MOBILE -------- */
+  
+    .grid-catalogo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+      gap: 70px;
+
+      img{
+        width: 180px;
+        height: 300px;
+      }
+
+      img:hover{
+        width: 200px;
+        height: 350px;
+        }
+    }
+    
+    .catalogoExtra { 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img{
+        width: 200px;
+        height: 200px;
+      }
+
+      img:hover{
+        width: 280px;
+        height: 280px;
+        }
+     }
+  
+  /* -------  PROMOCIONES MOBILE ------- */
+  
+    .grid-main {  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .grid-main img{
+      width: 180px;
+      height: 180px;
+    }
+  
+    .grid-main img:hover{
+      width: 220px;
+      height: 220px;
+    }
+  
+    /* -------  NOSOTROS MOBILE ------- */
+    
+    .main-nosotros {  
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      img{
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    /* -------  CONTACTO MOBILE ------- */
+  
+    .contacto-main{
+        font-size: 20px;
+
+        input::-webkit-input-placeholder {
+            font-size: 16px;
+            line-height: 3;
+          }
+    }
+
+  }
+  
+  /* ----------------- TABLET RESPONSIVE ----------------- */
+  
+  @media screen and (min-width: 451px) and (max-width:1024px){
+
+    #enlaceWa{
+        visibility: hidden;
+      }
+      
+  /* PROMOCIONES TABLET */
+  
+    .grid-main{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+
+        img{
+            width: 200px;
+            height: 200px;
+        }
+
+        img:hover{
+            width: 240px;
+            height: 240px;
+        }
+    }
+  }
