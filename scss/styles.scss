@@ -1,12 +1,7 @@
-h1{
-    font-family: Bebas Neue;
-    color: rgb(53, 6, 6);
-  }
-  
-  body{
-    font-family: Bebas Neue;
-    overflow-x: hidden;
-}
+@import "variables";
+@import "grillas";
+@import "tipografias";
+
 
 /* --------------- NAVBAR --------------- */
 
@@ -100,7 +95,7 @@ h1{
       }
   }
   
-  .card{
+  .cardPromo{
     margin: 15px;
     margin-top: 30px;
 
@@ -119,8 +114,23 @@ h1{
   .card1{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 1cm;
     margin-bottom: 1cm;
+
+    &:hover{
+        transform:scale(1.05);
+    }
+
+  }
+  
+  .cardDireccion{
+      margin: 0 auto;
+
+    //   POR QUE NO ME TOMA EL HOVER?
+      &:hover{  
+          transform:scale(1.05);
+      }
   }
 
   .maps { 
@@ -338,4 +348,15 @@ h1{
             height: 240px;
         }
     }
+
+  /* NOSOTROS TABLET */
+
+    .cardComo {
+        font-size: 12px;
+    }
+
+    .cardAgua{
+        font-size: 14px;
+    }
+
   }

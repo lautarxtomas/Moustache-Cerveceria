@@ -1,7 +1,3 @@
-h1 {
-  font-family: Bebas Neue;
-  color: #350606; }
-
 body {
   font-family: Bebas Neue;
   overflow-x: hidden; }
@@ -77,10 +73,10 @@ body {
     height: 280px;
     transition: height 1s, width 1s; }
 
-.card {
+.cardPromo {
   margin: 15px;
   margin-top: 30px; }
-  .card:hover {
+  .cardPromo:hover {
     transform: scale(1.05); }
 
 /* ------------- NOSOTROS DESKTOP  ------------- */
@@ -90,8 +86,16 @@ body {
 .card1 {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 1cm;
   margin-bottom: 1cm; }
+  .card1:hover {
+    transform: scale(1.05); }
+
+.cardDireccion {
+  margin: 0 auto; }
+  .cardDireccion:hover {
+    transform: scale(1.05); }
 
 .maps {
   grid-area: maps;
@@ -234,4 +238,9 @@ body {
       height: 200px; }
     .grid-main img:hover {
       width: 240px;
-      height: 240px; } }
+      height: 240px; }
+  /* NOSOTROS TABLET */
+  .cardComo {
+    font-size: 12px; }
+  .cardAgua {
+    font-size: 14px; } }
