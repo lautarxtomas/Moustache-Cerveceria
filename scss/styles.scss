@@ -32,15 +32,19 @@
             margin-top: 10px;
         }
   }
-  
-  .grid-catalogo { 
+
+  @mixin catalogo{
     display: flex;
+    justify-content: center;
+    margin: 30px;
+    gap: 60px;
+  }
+  
+  .grid-catalogo {
+    @include catalogo;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
     grid-area: grid-catalogo;
-    gap: 60px;
-    margin: 30px;
         img {
             width: 230px;
             height: 380px;
@@ -53,10 +57,7 @@
   }
   
   .catalogoExtra{
-    display: flex;
-    justify-content: center;
-    margin: 30px;
-    gap: 60px;
+    @include catalogo;
         img {
             width: 300px;
             height: 300px;
@@ -159,6 +160,33 @@
         color: darkseagreen;
       }
   }
+
+  .boton{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid black;
+    font-size: 16px;
+    &:hover{
+      transform: scale(1.05);
+    }
+    margin: 40px;
+  }
+
+  .botonEnviar{
+    @extend .boton;
+    background-color: rgb(54, 4, 4);
+    color: whitesmoke;
+  }
+
+  .botonLimpiar{
+    @extend .boton;
+    background-color: whitesmoke;
+    color:rgb(54, 4, 4);
+  }
+
+
   
   /* --------------- FOOTER GENERAL --------------- */
   
@@ -167,7 +195,6 @@
     display: flex;
     flex-direction: column;
     background-color: rgb(53, 6, 6);
-    font-family: 'Bebas Neue', cursive;
     color: antiquewhite;
 
     img{
