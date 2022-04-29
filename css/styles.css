@@ -33,6 +33,7 @@ body {
   flex-wrap: wrap;
   grid-area: grid-catalogo; }
   .grid-catalogo img {
+    border-radius: 30px;
     width: 230px;
     height: 380px;
     transition: height 1s, width 1s; }
@@ -46,6 +47,7 @@ body {
   margin: 30px;
   gap: 60px; }
   .catalogoExtra img {
+    border-radius: 30px;
     width: 300px;
     height: 300px;
     transition: height 1s, width 1s; }
@@ -88,7 +90,10 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 1cm;
-  margin-bottom: 1cm; }
+  margin-bottom: 1cm;
+  border-radius: 30px; }
+  .card1 img {
+    border-radius: 30px; }
   .card1:hover {
     transform: scale(1.05); }
 
@@ -105,7 +110,6 @@ body {
 
 /* ------------- CONTACTO DESKTOP  ------------- */
 .contacto-main {
-  grid-area: contacto-main;
   text-align: center;
   font-family: 'Bebas Neue', cursive;
   font-size: 30px;
