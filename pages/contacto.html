@@ -45,61 +45,51 @@
 </nav>
 
 
-<div class="container">
-    
+<section class="container">
+
   <div class="row text-center">
-    <div class="col-12">CONTACTANOS</div>
+    <div class="col-12 title">
+      <h1>CONTACTANOS</h1>
+    </div>
   </div>
-  
-  <div class="row">
-    <div class="col-6">Nombre</div>
-    <div class="col-6">Apellido</div>
-  </div>
-  
-  <div class="row">
-      <div class="col-6">E-mail</div>
-      <div class="col-6">Teléfono</div>
-  </div>
-  
-  <div class="row">
-      <div class="col-12">Sugerencia</div>
-  </div>
-</div>
 
-  <!-- <div class="contacto-main">
-    <form id="formulario1">
+  <form class="row g-3 formContainer">
+    <div class="col-md-6">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" required placeholder="Ingresá tu nombre">
+    </div>
+    <div class="col-md-6">
+      <label for="apellido" class="form-label">Apellido</label>
+      <input type="text" class="form-control" required placeholder="Ingresá tu apellido">
+    </div>
+    <div class="col-md-8">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" required placeholder="Ingresá tu e-mail">
+    </div>
+    <div class="col-md-4">
+      <label for="telefono" class="form-label">Telefono</label>
+      <input type="tel" class="form-control" required placeholder="Ingresá tu teléfono">
+    </div>
+    <div class="col-md-12">
+      <label for="inputCity" class="form-label">Ciudad</label>
+      <input type="text" class="form-control" required placeholder="Dónde vivís?">
+    </div>
+    <div class="col-md-12">
+      <label for="sugerencia" class="form-label">Dejanos tu comentario/sugerencia!</label>
+      <textarea class="form-control" id="textContacto" placeholder="Escribinos tu consulta"></textarea>
+    </div>
 
-      <h2 class="colorAmarillo textCenter">COMPLETE LOS DATOS</h2>
-
-      <fieldset>
-        <legend> <b> Datos personales </b> </legend>
-        <div>
-          <label for="nombre"> <b>Nombr</b> </label>
-          <input type="text" id="nombre" required placeholder="Ingresá tu nombre completo">
-        </div>
-  
-        <div>
-          <label for="e-mail"> <b>E-mail</b> </label>
-          <input type="email" id="e-mail" required placeholder="Ingresá tu e-mail">
-        </div>
-  
-        <div>
-          <label for="telefono"> <b>Teléfono</b> </label>
-          <input type="tel" id="telefono" required placeholder="Ingresá tu teléfono">
-        </div>
-      </fieldset>
-
-      <br>
-      <br>
-
-      <textarea name="" id="textContacto" placeholder="Escribinos tu consulta"></textarea>
-
-      <br>
-      <br>
-
+    <div class="col-md-6 d-flex justify-content-center">
       <input class="botonEnviar" type="submit" value="Enviar">
+    </div>
+
+    <div class="col-md-6 d-flex justify-content-center">
       <input class="botonLimpiar" type="reset" value="Limpiar formulario">
-  </div> -->
+    </div>
+
+  </form>
+
+</section>
 
 
 <div class="grid-footer container-fluid">
