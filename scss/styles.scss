@@ -164,6 +164,7 @@
     margin-bottom: 1cm;
     border: 10px solid rgb(51, 5, 5);
     font-size: 20px;
+    background-image: linear-gradient(to left, rgb(143, 62, 62), rgb(163, 44, 44), rgb(65, 59, 82));
 }
 
   .boton{
@@ -218,14 +219,18 @@
   .flex-icons{
     display:flex;
     justify-content: center;
-    margin-bottom: 1cm;
+    margin-bottom: 15px;
+    gap: 10px;
 
-    img:hover{
+    svg{
+      color: rgb(136, 91, 138);
+    }
+
+    svg:hover{
         width: 60px;
         height: 60px;   
     }
   }
-  
   
   .buscanos{
     text-align: center;
@@ -255,10 +260,15 @@
     bottom: 0;
     right: 30px;
 
-    img:hover{
+    img{
+      transition: height 1s, width 1s;
+
+      &:hover{
         width: 90px;
         height: 90px;
       }
+    }
+
   }
   
   

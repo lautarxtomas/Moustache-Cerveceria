@@ -120,7 +120,8 @@ body {
   color: whitesmoke;
   margin-bottom: 1cm;
   border: 10px solid #330505;
-  font-size: 20px; }
+  font-size: 20px;
+  background-image: linear-gradient(to left, #8f3e3e, #a32c2c, #413b52); }
 
 .boton, .botonEnviar, .botonLimpiar {
   width: 200px;
@@ -156,8 +157,11 @@ body {
 .flex-icons {
   display: flex;
   justify-content: center;
-  margin-bottom: 1cm; }
-  .flex-icons img:hover {
+  margin-bottom: 15px;
+  gap: 10px; }
+  .flex-icons svg {
+    color: #885b8a; }
+  .flex-icons svg:hover {
     width: 60px;
     height: 60px; }
 
@@ -183,9 +187,11 @@ body {
   position: fixed;
   bottom: 0;
   right: 30px; }
-  #enlaceWa img:hover {
-    width: 90px;
-    height: 90px; }
+  #enlaceWa img {
+    transition: height 1s, width 1s; }
+    #enlaceWa img:hover {
+      width: 90px;
+      height: 90px; }
 
 /* --------------- MOBILE RESPONSIVE --------------- */
 @media screen and (min-width: 0px) and (max-width: 450px) {
