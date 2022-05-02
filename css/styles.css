@@ -13,6 +13,58 @@ body {
   background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg); }
 
 /* --------------- CATALOGO DESKTOP --------------- */
+.flex-catalogo {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  gap: 60px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: 'Chakra Petch', sans-serif; }
+  .flex-catalogo img {
+    width: 230px;
+    height: 380px;
+    transition: height 1s, width 1s;
+    border-radius: 30px; }
+
+.flip-box {
+  width: 230px;
+  height: 380px;
+  perspective: 1000px; }
+  .flip-box .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d; }
+    .flip-box .flip-box-inner .flip-box-front {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 30px; }
+    .flip-box .flip-box-inner .flip-box-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      background-color: #350707;
+      color: white;
+      transform: rotateY(180deg);
+      border-radius: 30px; }
+      .flip-box .flip-box-inner .flip-box-back p {
+        padding-left: 10px;
+        padding-right: 10px; }
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg); }
+
 .titulo {
   display: flex;
   background-color: black;
@@ -24,33 +76,16 @@ body {
   .titulo h2 {
     margin-top: 10px; }
 
-.grid-catalogo {
-  display: flex;
-  justify-content: center;
-  margin: 30px;
-  gap: 60px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  grid-area: grid-catalogo; }
-  .grid-catalogo img {
-    border-radius: 30px;
-    width: 230px;
-    height: 380px;
-    transition: height 1s, width 1s; }
-  .grid-catalogo img:hover {
-    width: 250px;
-    height: 400px; }
-
 .catalogoExtra {
   display: flex;
   justify-content: center;
   margin: 30px;
   gap: 60px; }
   .catalogoExtra img {
-    border-radius: 30px;
     width: 300px;
     height: 300px;
-    transition: height 1s, width 1s; }
+    transition: height 1s, width 1s;
+    border-radius: 30px; }
   .catalogoExtra img:hover {
     width: 320px;
     height: 320px; }
@@ -201,25 +236,18 @@ body {
   .navbar {
     font-size: 16px; }
   /* -------- CATALOGO MOBILE -------- */
-  .grid-catalogo {
+  .flex-catalogo {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 70px; }
-    .grid-catalogo img {
-      width: 180px;
-      height: 300px; }
-    .grid-catalogo img:hover {
-      width: 200px;
-      height: 350px; }
+    align-items: center; }
   .catalogoExtra {
     display: flex;
     flex-direction: column;
     align-items: center; }
     .catalogoExtra img {
-      width: 200px;
-      height: 200px; }
+      width: 230px;
+      height: 230px; }
     .catalogoExtra img:hover {
       width: 280px;
       height: 280px; }
