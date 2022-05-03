@@ -18,6 +18,10 @@
   background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg);
 }
 
+.cardsIndex{
+  margin: 1cm;
+}
+
 
 /* --------------- CATALOGO DESKTOP --------------- */
 
@@ -171,47 +175,50 @@ $fontcolor: (
           height: 320px;;
       }
 }
-/* ------------- PROMOCIONES DESKTOP  ------------- */
+/* ------------- FAQ DESKTOP  ------------- */
 
-#bodyPromo {
+#bodyFaq {
     background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg);
   }
-  
-  .grid-main {  
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    gap: 20px;
 
-    img{
-            width: 250px;
-            height: 250px;
-        }
+.faq{
+  display: flex;
+  align-items: center;
+  font-size: 60px;
+  color: rgb(136, 91, 138);
+  background-color: rgb(131, 19, 19);
+  height: 90px;
+  padding: 70px;
+}
 
-    img:hover{
-        width: 280px;
-        height: 280px;
-        transition: height 1s, width 1s;
-      }
+.mainTexto{
+  display: flex;
+  justify-content: center;
+  font-family: 'Chakra Petch', sans-serif;
+  .cajaTextos{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 1cm;
+    color: whitesmoke;
+    .textos{
+      display: flex;
+      flex-direction: column;
+    }
+    h2{
+      font-family: Bebas Neue;
+      color: yellow;
+     }
   }
-  
-  .cardPromo{
-    margin: 15px;
-    margin-top: 30px;
-
-    &:hover{
-        transform:scale(1.05);
-    }  
-  }
-  
+}
   
   /* ------------- NOSOTROS DESKTOP  ------------- */
   
   #bodyNosotros {
     background-image: linear-gradient(to left, rgb(231, 216, 216), rgb(165, 131, 131));
+    h2{
+     font-family: Bebas Neue;
+    }
   }
   
   .card1{
@@ -221,6 +228,7 @@ $fontcolor: (
     margin-top: 1cm;
     margin-bottom: 1cm;
     border-radius: 30px;
+    font-family: 'Chakra Petch', sans-serif;
     img{
       border-radius: 30px;
     }
@@ -232,6 +240,7 @@ $fontcolor: (
   }
   
   .cardDireccion{
+      font-family: 'Chakra Petch', sans-serif;
       margin: 0 auto;
 
     //   POR QUE NO ME TOMA EL HOVER?
@@ -246,7 +255,7 @@ $fontcolor: (
     justify-content: center;
     margin: 20px;
   }
-  
+
   /* ------------- CONTACTO DESKTOP  ------------- */
   
   .title{
@@ -376,7 +385,13 @@ $fontcolor: (
     .navbar{
       font-size: 16px;
     }
+
+    /* -------- INDEX MOBILE -------- */
   
+    .cardsIndex{
+      gap: 40px;
+    }
+
     /* -------- CATALOGO MOBILE -------- */
   
     .flex-catalogo {
@@ -402,28 +417,8 @@ $fontcolor: (
         }
      }
   
-  /* -------  PROMOCIONES MOBILE ------- */
   
-    .grid-main {  
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    
-    .grid-main img{
-      width: 180px;
-      height: 180px;
-    }
-  
-    .grid-main img:hover{
-      width: 220px;
-      height: 220px;
-    }
-  
-    /* -------  NOSOTROS MOBILE ------- */
+ /* -------  NOSOTROS MOBILE ------- */
     
     .main-nosotros {  
       grid-template-columns: 1fr;
@@ -447,23 +442,6 @@ $fontcolor: (
         visibility: hidden;
       }
       
-  /* PROMOCIONES TABLET */
-  
-    .grid-main{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-
-        img{
-            width: 200px;
-            height: 200px;
-        }
-
-        img:hover{
-            width: 240px;
-            height: 240px;
-        }
-    }
-
   /* NOSOTROS TABLET */
 
     .cardComo {

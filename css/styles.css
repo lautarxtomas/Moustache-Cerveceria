@@ -12,6 +12,9 @@ body {
 #bodyIndex, #bodyContacto, #bodyCatalogo {
   background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg); }
 
+.cardsIndex {
+  margin: 1cm; }
+
 /* --------------- CATALOGO DESKTOP --------------- */
 .flex-catalogo {
   display: flex;
@@ -159,35 +162,41 @@ body {
     width: 320px;
     height: 320px; }
 
-/* ------------- PROMOCIONES DESKTOP  ------------- */
-#bodyPromo {
+/* ------------- FAQ DESKTOP  ------------- */
+#bodyFaq {
   background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg); }
 
-.grid-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  justify-items: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  gap: 20px; }
-  .grid-main img {
-    width: 250px;
-    height: 250px; }
-  .grid-main img:hover {
-    width: 280px;
-    height: 280px;
-    transition: height 1s, width 1s; }
+.faq {
+  display: flex;
+  align-items: center;
+  font-size: 60px;
+  color: #885b8a;
+  background-color: #831313;
+  height: 90px;
+  padding: 70px; }
 
-.cardPromo {
-  margin: 15px;
-  margin-top: 30px; }
-  .cardPromo:hover {
-    transform: scale(1.05); }
+.mainTexto {
+  display: flex;
+  justify-content: center;
+  font-family: 'Chakra Petch', sans-serif; }
+  .mainTexto .cajaTextos {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 1cm;
+    color: whitesmoke; }
+    .mainTexto .cajaTextos .textos {
+      display: flex;
+      flex-direction: column; }
+    .mainTexto .cajaTextos h2 {
+      font-family: Bebas Neue;
+      color: yellow; }
 
 /* ------------- NOSOTROS DESKTOP  ------------- */
 #bodyNosotros {
   background-image: linear-gradient(to left, #e7d8d8, #a58383); }
+  #bodyNosotros h2 {
+    font-family: Bebas Neue; }
 
 .card1 {
   display: flex;
@@ -195,13 +204,15 @@ body {
   align-items: center;
   margin-top: 1cm;
   margin-bottom: 1cm;
-  border-radius: 30px; }
+  border-radius: 30px;
+  font-family: 'Chakra Petch', sans-serif; }
   .card1 img {
     border-radius: 30px; }
   .card1:hover {
     transform: scale(1.05); }
 
 .cardDireccion {
+  font-family: 'Chakra Petch', sans-serif;
   margin: 0 auto; }
   .cardDireccion:hover {
     transform: scale(1.05); }
@@ -304,6 +315,9 @@ body {
   /* -------- NAVBAR MOBILE -------- */
   .navbar {
     font-size: 16px; }
+  /* -------- INDEX MOBILE -------- */
+  .cardsIndex {
+    gap: 40px; }
   /* -------- CATALOGO MOBILE -------- */
   .flex-catalogo {
     display: flex;
@@ -320,20 +334,6 @@ body {
     .catalogoExtra img:hover {
       width: 280px;
       height: 280px; }
-  /* -------  PROMOCIONES MOBILE ------- */
-  .grid-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    text-align: center; }
-  .grid-main img {
-    width: 180px;
-    height: 180px; }
-  .grid-main img:hover {
-    width: 220px;
-    height: 220px; }
   /* -------  NOSOTROS MOBILE ------- */
   .main-nosotros {
     grid-template-columns: 1fr;
@@ -349,16 +349,6 @@ body {
 @media screen and (min-width: 451px) and (max-width: 1024px) {
   #enlaceWa {
     visibility: hidden; }
-  /* PROMOCIONES TABLET */
-  .grid-main {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr; }
-    .grid-main img {
-      width: 200px;
-      height: 200px; }
-    .grid-main img:hover {
-      width: 240px;
-      height: 240px; }
   /* NOSOTROS TABLET */
   .cardComo {
     font-size: 12px; }
