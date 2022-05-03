@@ -54,13 +54,82 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      background-color: #350707;
-      color: white;
       transform: rotateY(180deg);
-      border-radius: 30px; }
+      border-radius: 30px;
+      opacity: 0.9; }
       .flip-box .flip-box-inner .flip-box-back p {
         padding-left: 10px;
         padding-right: 10px; }
+
+.birra--honey {
+  background-color: #135f13; }
+
+.birra--hoppy {
+  background-color: #db2222; }
+
+.birra--ipa {
+  background-color: #50cc50; }
+
+.birra--kolsch {
+  background-color: #e4d724; }
+
+.birra--porter {
+  background-color: #801e1e; }
+
+.birra--smoked {
+  background-color: #5858d3; }
+
+.birra--stout {
+  background-color: #ee5a54; }
+
+.birra--weizen {
+  background-color: yellow; }
+
+.birra--altbier {
+  background-color: #f19114; }
+
+.birra--frambuesa {
+  background-color: #d44abd; }
+
+.birra--honey {
+  color: whitesmoke; }
+
+.birra--hoppy {
+  color: whitesmoke; }
+
+.birra--ipa {
+  color: black; }
+
+.birra--kolsch {
+  color: black; }
+
+.birra--porter {
+  color: whitesmoke; }
+
+.birra--smoked {
+  color: whitesmoke; }
+
+.birra--stout {
+  color: whitesmoke; }
+
+.birra--weizen {
+  color: black; }
+
+.birra--altbier {
+  color: black; }
+
+.birra--frambuesa {
+  color: whitesmoke; }
+
+.ibuAlc {
+  background-color: black; }
+
+.ibuAlc2 {
+  background-color: whitesmoke;
+  border-radius: 10px; }
+
+.newSize {
+  font-size: 14px; }
 
 .flip-box:hover .flip-box-inner {
   transform: rotateY(180deg); }

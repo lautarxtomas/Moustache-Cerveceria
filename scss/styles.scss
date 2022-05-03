@@ -69,10 +69,9 @@
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
-          background-color: rgb(53, 7, 7);
-          color: white;
           transform: rotateY(180deg);
           border-radius: 30px;
+          opacity: 0.9;
           p{
             padding-left: 10px;
             padding-right: 10px;
@@ -80,6 +79,67 @@
         }
     }
 }
+
+// MAPS BG - COLOR DE LAS DESCRIPCIONES
+
+// -------------- BACKGROUND COLORS
+
+$bgs: (
+  honey: rgb(19, 95, 19),
+  hoppy: rgb(219, 34, 34),
+  ipa: rgb(80, 204, 80),
+  kolsch: rgb(228, 215, 36),
+  porter: rgb(128, 30, 30),
+  smoked: rgb(88, 88, 211),
+  stout: rgb(238, 90, 84),
+  weizen: yellow,
+  altbier: rgb(241, 145, 20),
+  frambuesa: rgb(212, 74, 189)
+);
+
+@each $birra, $color in $bgs {
+  .birra--#{$birra} {
+    background-color: $color;
+  }
+}
+
+// -------------- FONT COLORS
+
+$fontcolor: (
+  honey: whitesmoke,
+  hoppy: whitesmoke,
+  ipa: black,
+  kolsch: black,
+  porter: whitesmoke,
+  smoked: whitesmoke,
+  stout: whitesmoke,
+  weizen: black,
+  altbier: black,
+  frambuesa: whitesmoke
+);
+
+@each $birri, $fcolor in $fontcolor {
+  .birra--#{$birri} {
+   color: $fcolor;
+  }
+}
+
+.ibuAlc{
+  background-color: black;
+}
+
+.ibuAlc2{
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+.newSize{
+  font-size: 14px;
+}
+
+
+// FIN MAPS
+
 
 .flip-box:hover .flip-box-inner {
   transform: rotateY(180deg);
