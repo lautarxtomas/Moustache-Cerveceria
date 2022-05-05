@@ -12,6 +12,28 @@ body {
 #bodyIndex, #bodyContacto, #bodyCatalogo {
   background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg); }
 
+.pagos {
+  background-image: linear-gradient(to bottom, #ca4949, #2c0606);
+  height: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1cm;
+  margin-left: 4cm;
+  margin-right: 4cm;
+  color: whitesmoke;
+  border-radius: 10px; }
+  .pagos .envios {
+    display: flex; }
+    .pagos .envios img {
+      margin-right: 16px; }
+  .pagos .transferencia {
+    display: flex; }
+    .pagos .transferencia svg {
+      margin-right: 16px; }
+  .pagos .mercadopago {
+    display: flex; }
+
 .cardsIndex {
   margin: 1cm; }
 
@@ -171,7 +193,7 @@ body {
   align-items: center;
   font-size: 60px;
   color: #885b8a;
-  background-color: #831313;
+  background: linear-gradient(to left, #944949, #441010);
   height: 90px;
   padding: 70px; }
 
@@ -279,6 +301,8 @@ body {
   .flex-icons svg:hover {
     width: 60px;
     height: 60px; }
+  .flex-icons .wsp {
+    margin-top: 2px; }
 
 .buscanos {
   text-align: center;
@@ -297,21 +321,8 @@ body {
     margin-top: 0.5cm;
     margin-bottom: 0.5cm; }
 
-#enlaceWa {
-  font-size: 60px;
-  position: fixed;
-  bottom: 0;
-  right: 30px; }
-  #enlaceWa img {
-    transition: height 1s, width 1s; }
-    #enlaceWa img:hover {
-      width: 90px;
-      height: 90px; }
-
 /* --------------- MOBILE RESPONSIVE --------------- */
 @media screen and (min-width: 0px) and (max-width: 450px) {
-  #enlaceWa {
-    visibility: hidden; }
   /* -------- NAVBAR MOBILE -------- */
   .navbar {
     font-size: 16px; }
@@ -333,24 +344,15 @@ body {
       height: 230px; }
     .catalogoExtra img:hover {
       width: 280px;
-      height: 280px; }
-  /* -------  NOSOTROS MOBILE ------- */
-  .main-nosotros {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-    justify-content: center;
-    gap: 20px; }
-    .main-nosotros img {
-      width: 150px;
-      height: 150px; } }
+      height: 280px; } }
 
+/* -------  NOSOTROS MOBILE ------- */
 /* ----------------- TABLET RESPONSIVE ----------------- */
 @media screen and (min-width: 451px) and (max-width: 1024px) {
-  #enlaceWa {
-    visibility: hidden; }
   /* NOSOTROS TABLET */
   .cardComo {
-    font-size: 12px; }
+    font-size: 10px; }
   .cardAgua {
+    font-size: 12px; }
+  .cardLupulo {
     font-size: 14px; } }
