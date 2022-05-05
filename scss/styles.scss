@@ -7,9 +7,6 @@
 
 .navbar{
   font-size: 30px;
-    .navbar-brand img:hover {
-        width: 130px;
-  }
 }
 
 /* --------------- INDEX DESKTOP --------------- */
@@ -401,6 +398,22 @@ $fontcolor: (
       gap: 40px;
     }
 
+    .pagos{
+      flex-direction: column;
+      justify-content: space-around;
+      height: 250px;
+      font-size: 20px;
+      margin-top: 16px;
+      margin-right: 16px;
+      margin-left: 16px;
+      .transferencia{
+        h2{
+          margin-left: 16px;
+        }
+      }
+    }
+
+
     /* -------- CATALOGO MOBILE -------- */
   
     .flex-catalogo {
@@ -436,6 +449,13 @@ $fontcolor: (
   /* ----------------- TABLET RESPONSIVE ----------------- */
   
   @media screen and (min-width: 451px) and (max-width:1024px){
+
+  /* INDEX TABLET */
+
+  .pagos{
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 
   /* NOSOTROS TABLET */
 

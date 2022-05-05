@@ -5,8 +5,6 @@ body {
 /* --------------- NAVBAR --------------- */
 .navbar {
   font-size: 30px; }
-  .navbar .navbar-brand img:hover {
-    width: 130px; }
 
 /* --------------- INDEX DESKTOP --------------- */
 #bodyIndex, #bodyContacto, #bodyCatalogo {
@@ -329,6 +327,16 @@ body {
   /* -------- INDEX MOBILE -------- */
   .cardsIndex {
     gap: 40px; }
+  .pagos {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 250px;
+    font-size: 20px;
+    margin-top: 16px;
+    margin-right: 16px;
+    margin-left: 16px; }
+    .pagos .transferencia h2 {
+      margin-left: 16px; }
   /* -------- CATALOGO MOBILE -------- */
   .flex-catalogo {
     display: flex;
@@ -349,6 +357,10 @@ body {
 /* -------  NOSOTROS MOBILE ------- */
 /* ----------------- TABLET RESPONSIVE ----------------- */
 @media screen and (min-width: 451px) and (max-width: 1024px) {
+  /* INDEX TABLET */
+  .pagos {
+    margin-left: 16px;
+    margin-right: 16px; }
   /* NOSOTROS TABLET */
   .cardComo {
     font-size: 10px; }
