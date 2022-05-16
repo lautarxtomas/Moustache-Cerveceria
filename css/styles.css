@@ -37,7 +37,7 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  height: 100%; }
+  height: 100vh; }
 
 #seccion1 {
   background-image: url(https://cdn.foodandwineespanol.com/2020/07/congreso-virtual-cerveceras-latam.jpg);
@@ -96,7 +96,8 @@ body {
 .flip-box {
   width: 230px;
   height: 380px;
-  perspective: 1000px; }
+  perspective: 1000px;
+  border-radius: 30px; }
   .flip-box .flip-box-inner {
     position: relative;
     width: 100%;
@@ -110,7 +111,8 @@ body {
       height: 100%;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
-      border-radius: 30px; }
+      border-radius: 30px;
+      box-shadow: 0px 0px 10px 3px #ebe2e2; }
     .flip-box .flip-box-inner .flip-box-back {
       position: absolute;
       width: 100%;
@@ -122,7 +124,8 @@ body {
       justify-content: space-evenly;
       transform: rotateY(180deg);
       border-radius: 30px;
-      opacity: 0.9; }
+      opacity: 0.9;
+      box-shadow: 0px 0px 30px 5px #d1bdbd; }
       .flip-box .flip-box-inner .flip-box-back p {
         padding-left: 10px;
         padding-right: 10px; }
@@ -299,26 +302,36 @@ body {
   margin-bottom: 1cm;
   border: 10px solid #330505;
   font-size: 20px;
-  background-image: linear-gradient(to left, #8f3e3e, #a32c2c, #413b52); }
-
-.boton, .botonEnviar, .botonLimpiar {
-  width: 200px;
-  height: 50px;
-  font-size: 20px;
-  text-align: center;
-  border-radius: 20px;
-  border: 1px solid black;
-  margin: 40px; }
-  .boton:hover, .botonEnviar:hover, .botonLimpiar:hover {
-    transform: scale(1.05); }
-
-.botonEnviar {
-  background-color: #360404;
-  color: whitesmoke; }
-
-.botonLimpiar {
-  background-color: whitesmoke;
-  color: #360404; }
+  background: #222; }
+  .formContainer #form-input {
+    color: whitesmoke;
+    border: none;
+    border-bottom: solid 3px #db4141;
+    background: transparent; }
+    .formContainer #form-input:focus {
+      background: linear-gradient(to bottom, transparent, #444);
+      outline: none;
+      color: #fff; }
+    .formContainer #form-input::placeholder {
+      color: #d1b5b5; }
+  .formContainer .boton, .formContainer .botonEnviar, .formContainer .botonLimpiar {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    margin: 30px; }
+  .formContainer .botonEnviar {
+    background-color: #db4141;
+    color: whitesmoke; }
+    .formContainer .botonEnviar:hover {
+      background-color: #360404; }
+  .formContainer .botonLimpiar {
+    background-color: whitesmoke;
+    color: #360404; }
+    .formContainer .botonLimpiar:hover {
+      background-color: #cfbcbc; }
 
 /* --------------- FOOTER GENERAL --------------- */
 .grid-footer {
@@ -397,9 +410,11 @@ body {
       height: 230px; }
     .catalogoExtra img:hover {
       width: 280px;
-      height: 280px; } }
+      height: 280px; }
+  /* -------- CONTACTO MOBILE -------- */
+  .formContainer {
+    margin: 16px; } }
 
-/* -------  NOSOTROS MOBILE ------- */
 /* ----------------- TABLET RESPONSIVE ----------------- */
 @media screen and (min-width: 451px) and (max-width: 1024px) {
   /* INDEX TABLET */
