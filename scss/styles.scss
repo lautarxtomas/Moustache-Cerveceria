@@ -43,7 +43,8 @@ body{
 
 .parallax3{
   @include parallax;
-  height: 100vh;
+  height: auto;
+  width: auto;
 }
 
 #seccion1{
@@ -112,18 +113,79 @@ body{
     }
 }
 
-
-#seccion3{
-  background-image: url(https://cdn.pixabay.com/photo/2017/04/10/15/59/beer-2218900_960_720.jpg);
+@mixin flexcards{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  .cardPromo{
-    margin: 1cm;
+  margin: 30px;
+  margin-left: -20px;
+  margin-right: -20px;
+  .flex-box{
+    display: flex;
+    height: 400px;
+    width: 80%;
+    margin-bottom: 1cm;
+    .flex-img{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 1.5s;
+      padding: 1cm;
+      flex-grow: 1;
+      img{
+        width: 320px;
+        height: 320px;
+        border-radius: 30px;
+      }
+    }
+    .flex-txt{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 1cm;
+      color: whitesmoke;
+      flex-grow: 2;
+      transition: 1.5s;
+      h2{
+        color: yellow;
+      }
+    }
   }
 }
 
-
+#seccion3{
+  background-image: url(https://cdn.pixabay.com/photo/2017/04/10/15/59/beer-2218900_960_720.jpg);
+  background-size: cover;
+  @include flexcards;
+  margin: 0;
+  article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    
+  }
+  .flex-box{
+    
+    background-color: rgba(235, 55, 55, 0.4);
+    width: 100%;
+    .flex-img{
+      img{
+        width: 420px;
+        height: 360px;
+      }
+    }
+    .descQr{
+      img{
+        width: 350px;
+        height: 350px;
+      }
+    }
+    
+  }
+}
+ 
 
 /* --------------- CATALOGO DESKTOP --------------- */
 #bodyCatalogo{
@@ -285,6 +347,20 @@ $fontcolor: (
           height: 320px;;
       }
 }
+
+  /* ------------- NOSOTROS DESKTOP  ------------- */
+  
+  #bodyNosotros {
+    background-image: radial-gradient(black, rgb(139, 39, 39));
+    h2{
+     font-family: Bebas Neue;
+    }
+  }
+
+  .flex-nosotros{
+    @include flexcards; //MISMO MIXIN QUE DEFINIMOS EN INDEX DESKTOP
+  }
+
 /* ------------- FAQ DESKTOP  ------------- */
 
 #bodyFaq {
@@ -322,53 +398,36 @@ $fontcolor: (
      }
   }
 }
-  
-  /* ------------- NOSOTROS DESKTOP  ------------- */
-  
-  #bodyNosotros {
-    background-image: radial-gradient(black, rgb(139, 39, 39));
-    h2{
-     font-family: Bebas Neue;
-    }
-  }
 
-  .card1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1cm;
-    margin-bottom: 1cm;
-    border-radius: 30px;
-    font-family: 'Chakra Petch', sans-serif;
-    img{
-      border-radius: 30px;
-    }
-
-    &:hover{
-        transform:scale(1.05);
-    }
-
-  }
-  
+.cardsFaq{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 40px;
   .cardDireccion{
-      font-family: 'Chakra Petch', sans-serif;
-      margin: 0 auto;
-
-    //   POR QUE NO ME TOMA EL HOVER?
-      &:hover{  
-          transform:scale(1.05);
+    width: 200px;
+    border-radius: 40px;
+    .card-body{
+      background-image: url(../img/wallpaper.jpg);
+      background-size: cover;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      h2, p{
+        color: whitesmoke;
       }
+    }
+    img{
+      border-end-start-radius: 40px;
+      border-end-end-radius: 40px;
+    }
   }
-
-  .maps { 
-    grid-area: maps;
-    display: flex;
-    justify-content: center;
-    margin: 20px;
+  .maps{
     iframe{
-    border-radius: 50px;
-   }
+      height: 400px;
+      border-radius: 40px;
+    }
   }
+}
+  
 
  /* ------------- CONTACTO DESKTOP  ------------- */
   
@@ -538,7 +597,31 @@ $fontcolor: (
 
     #seccion3{
       height: auto;
+      .flex-promos{
+        margin: 10px;
+        .flex-box{
+          flex-direction: column;
+          height: 100%;
+          width: 100%;
+            
+            .flex-img{
+              order: 1;
+              img{
+                height: 240px;
+                width: 300px;
+              }
+            }
+            .flex-txt{
+              order: 2;
+              font-size: 18px;
+            }
+            .descQr img{
+              height: 260px;
+              width: 260px;
+            }
+        }
     }
+  }
 
     /* -------- CATALOGO MOBILE -------- */
   
@@ -564,6 +647,54 @@ $fontcolor: (
         height: 280px;
         }
      }
+
+     /* -------- NOSOTROS MOBILE -------- */
+
+    .flex-nosotros{
+      margin: 16px;
+      .flex-box{
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+          
+          .flex-img{
+            order: 1;
+            img{
+              height: 230px;
+              width: 230px;
+            }
+          }
+          .flex-txt{
+            order: 2;
+            font-size: 18px;
+          }
+      }
+  }
+
+   /* -------- FAQ MOBILE -------- */
+
+  .cardsFaq{
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    .cardDireccion{
+      width: 350px;
+      border-radius: 40px;
+      margin-bottom: 16px;
+      img{
+        border-end-start-radius: 40px;
+        border-end-end-radius: 40px;
+      }
+    }
+    .maps{
+      margin-bottom: 16px;
+      iframe{
+        height: 300px;
+        width: 250px;
+        border-radius: 40px;
+      }
+    }
+  }
 
      /* -------- CONTACTO MOBILE -------- */
 
@@ -607,27 +738,53 @@ $fontcolor: (
   }
 
 
-  // COMO HAGO ESTO?
   #seccion3{
     height: auto;
-    .cardsIndex{
-      display: flex;
-      flex-direction: column;
-    }
+    .flex-promos{
+      margin: 10px;
+      .flex-box{
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+          
+          .flex-img{
+            order: 1;
+            img{
+              height: 300px;
+              width: 360px;
+            }
+          }
+          .flex-txt{
+            order: 2;
+            font-size: 18px;
+          }
+      }
   }
+}
 
   /* NOSOTROS TABLET */
 
-    .cardComo {
-        font-size: 10px;
-    }
-
-    .cardAgua{
-        font-size: 12px;
-    }
-
-    .cardLupulo{
-      font-size: 14px;
-    }
-
+    .flex-nosotros{
+      margin: 16px;
+      .flex-box{
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+          
+          .flex-img{
+            order: 1;
+            img{
+              height: 300px;
+              width: 300px;
+            }
+          }
+          .flex-txt{
+            order: 2;
+            font-size: 20px;
+          }
+      }
   }
+
+   /* -------- FAQ TABLET -------- */
+
+}
