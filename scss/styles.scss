@@ -3,7 +3,7 @@ body{
   overflow-x: hidden;
 }
 
-#bodyContacto, #bodyCatalogo{
+#bodyContacto{
   background-image: url(../img/wallpaper.jpg);
   background-size: cover;
 }
@@ -126,6 +126,9 @@ body{
 
 
 /* --------------- CATALOGO DESKTOP --------------- */
+#bodyCatalogo{
+  background-image: radial-gradient(black, rgb(139, 39, 39));
+}
 
 .titulo{
   display: flex;
@@ -321,7 +324,7 @@ $fontcolor: (
   /* ------------- NOSOTROS DESKTOP  ------------- */
   
   #bodyNosotros {
-    background-image: linear-gradient(to left, rgb(231, 216, 216), rgb(165, 131, 131));
+    background-image: radial-gradient(black, rgb(139, 39, 39));
     h2{
      font-family: Bebas Neue;
     }
@@ -360,6 +363,9 @@ $fontcolor: (
     display: flex;
     justify-content: center;
     margin: 20px;
+    iframe{
+    border-radius: 50px;
+   }
   }
 
  /* ------------- CONTACTO DESKTOP  ------------- */

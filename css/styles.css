@@ -2,7 +2,7 @@ body {
   font-family: Bebas Neue;
   overflow-x: hidden; }
 
-#bodyContacto, #bodyCatalogo {
+#bodyContacto {
   background-image: url(../img/wallpaper.jpg);
   background-size: cover; }
 
@@ -99,6 +99,9 @@ body {
     margin: 1cm; }
 
 /* --------------- CATALOGO DESKTOP --------------- */
+#bodyCatalogo {
+  background-image: radial-gradient(black, #8b2727); }
+
 .titulo {
   display: flex;
   align-items: center;
@@ -281,7 +284,7 @@ body {
 
 /* ------------- NOSOTROS DESKTOP  ------------- */
 #bodyNosotros {
-  background-image: linear-gradient(to left, #e7d8d8, #a58383); }
+  background-image: radial-gradient(black, #8b2727); }
   #bodyNosotros h2 {
     font-family: Bebas Neue; }
 
@@ -309,6 +312,8 @@ body {
   display: flex;
   justify-content: center;
   margin: 20px; }
+  .maps iframe {
+    border-radius: 50px; }
 
 /* ------------- CONTACTO DESKTOP  ------------- */
 .title {
