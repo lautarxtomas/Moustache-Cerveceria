@@ -1,8 +1,10 @@
 body {
-  font-family: Bebas Neue; }
+  font-family: Bebas Neue;
+  overflow-x: hidden; }
 
 #bodyContacto, #bodyCatalogo {
-  background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg); }
+  background-image: url(../img/wallpaper.jpg);
+  background-size: cover; }
 
 /* --------------- NAVBAR --------------- */
 .navbar {
@@ -16,7 +18,7 @@ body {
   padding: 0; }
 
 .parallax1 {
-  background: #fff fixed no-repeat 50% 50%;
+  background: fixed no-repeat 50% 50%;
   background-size: cover;
   width: 100%;
   padding: 0;
@@ -24,7 +26,7 @@ body {
   height: 50%; }
 
 .parallax2 {
-  background: #fff fixed no-repeat 50% 50%;
+  background: fixed no-repeat 50% 50%;
   background-size: cover;
   width: 100%;
   padding: 0;
@@ -32,7 +34,7 @@ body {
   height: 60%; }
 
 .parallax3 {
-  background: #fff fixed no-repeat 50% 50%;
+  background: fixed no-repeat 50% 50%;
   background-size: cover;
   width: 100%;
   padding: 0;
@@ -40,35 +42,53 @@ body {
   height: 100vh; }
 
 #seccion1 {
-  background-image: url(https://cdn.foodandwineespanol.com/2020/07/congreso-virtual-cerveceras-latam.jpg);
+  height: 40%;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
-  color: whitesmoke; }
+  color: white; }
+  #seccion1 div {
+    transition: all 0.5s; }
   #seccion1 .envios {
     display: flex;
     align-items: center; }
     #seccion1 .envios svg {
       margin-right: 16px; }
+    #seccion1 .envios:hover {
+      color: gray; }
   #seccion1 .transferencia {
     display: flex;
     align-items: center; }
     #seccion1 .transferencia svg {
       margin-right: 16px; }
+    #seccion1 .transferencia:hover {
+      color: gray; }
   #seccion1 .mercadopago {
     display: flex; }
+    #seccion1 .mercadopago img {
+      height: 100px; }
 
 #seccion2 {
-  background-image: url(https://cdn.pixabay.com/photo/2015/06/30/18/36/st-826688_960_720.jpg);
+  background-image: url(https://cdn.foodandwineespanol.com/2020/07/congreso-virtual-cerveceras-latam.jpg);
   display: flex;
-  align-items: center;
-  justify-content: space-evenly; }
-  #seccion2 img {
-    width: 350px;
-    height: 350px;
-    border-radius: 10px;
-    margin: 1cm; }
+  align-content: center;
+  justify-content: center; }
+  #seccion2 .imgVasos {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; }
+    #seccion2 .imgVasos .vasoBirra1 img {
+      transition: 1s; }
+    #seccion2 .imgVasos .vasoBirra2 img {
+      transition: 2s; }
+    #seccion2 .imgVasos .vasoBirra3 img {
+      transition: 3s; }
+    #seccion2 .imgVasos img {
+      width: 300px;
+      height: 300px;
+      border-radius: 10px; }
 
 #seccion3 {
   background-image: url(https://cdn.pixabay.com/photo/2017/04/10/15/59/beer-2218900_960_720.jpg);
@@ -79,6 +99,17 @@ body {
     margin: 1cm; }
 
 /* --------------- CATALOGO DESKTOP --------------- */
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  color: #885b8a;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg);
+  background-size: cover;
+  height: 150px;
+  padding: 30px; }
+
 .flex-catalogo {
   display: flex;
   justify-content: center;
@@ -112,7 +143,7 @@ body {
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       border-radius: 30px;
-      box-shadow: 0px 0px 10px 3px #ebe2e2; }
+      box-shadow: 0px 0px 10px 3px #e94c4c; }
     .flip-box .flip-box-inner .flip-box-back {
       position: absolute;
       width: 100%;
@@ -125,7 +156,7 @@ body {
       transform: rotateY(180deg);
       border-radius: 30px;
       opacity: 0.9;
-      box-shadow: 0px 0px 30px 5px #d1bdbd; }
+      box-shadow: 0px 0px 30px 5px #ec4e4e; }
       .flip-box .flip-box-inner .flip-box-back p {
         padding-left: 10px;
         padding-right: 10px; }
@@ -203,17 +234,6 @@ body {
 .flip-box:hover .flip-box-inner {
   transform: rotateY(180deg); }
 
-.titulo {
-  display: flex;
-  background-color: black;
-  justify-content: center;
-  align-items: center;
-  color: whitesmoke;
-  opacity: 0.6;
-  margin-top: 20px; }
-  .titulo h2 {
-    margin-top: 10px; }
-
 .catalogoExtra {
   display: flex;
   justify-content: center;
@@ -237,9 +257,10 @@ body {
   align-items: center;
   font-size: 60px;
   color: #885b8a;
-  background: linear-gradient(to left, #944949, #441010);
-  height: 90px;
-  padding: 70px; }
+  background-image: url(../img/wallpaper.jpg);
+  background-size: cover;
+  height: 150px;
+  padding: 30px; }
 
 .mainTexto {
   display: flex;
@@ -327,11 +348,15 @@ body {
     color: whitesmoke; }
     .formContainer .botonEnviar:hover {
       background-color: #360404; }
+    .formContainer .botonEnviar:active {
+      background: linear-gradient(to bottom, #db4141, #360404); }
   .formContainer .botonLimpiar {
     background-color: whitesmoke;
     color: #360404; }
     .formContainer .botonLimpiar:hover {
       background-color: #cfbcbc; }
+    .formContainer .botonLimpiar:active {
+      background: linear-gradient(to bottom, whitesmoke, #cfbcbc); }
 
 /* --------------- FOOTER GENERAL --------------- */
 .grid-footer {
@@ -384,15 +409,21 @@ body {
   #bodyIndex {
     overflow-x: hidden; }
   #seccion1 {
-    flex-direction: column; }
+    flex-direction: column;
+    height: 100%; }
   #seccion2 {
     height: auto;
-    flex-direction: column;
-    gap: 16px; }
-    #seccion2 img {
-      margin-top: 1cm;
-      width: 200px;
-      height: 200px; }
+    display: flex;
+    justify-content: center; }
+    #seccion2 .imgVasos {
+      height: 1000px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly; }
+      #seccion2 .imgVasos img {
+        width: 200px;
+        height: 200px;
+        border-radius: 10px; }
   #seccion3 {
     height: auto; }
   /* -------- CATALOGO MOBILE -------- */
@@ -421,10 +452,21 @@ body {
   #bodyIndex {
     overflow-x: hidden; }
   #seccion1 {
-    flex-direction: column; }
+    flex-direction: column;
+    height: 100%; }
   #seccion2 {
     height: auto;
-    flex-direction: column; }
+    display: flex;
+    justify-content: center; }
+    #seccion2 .imgVasos {
+      height: 1000px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly; }
+      #seccion2 .imgVasos img {
+        width: 270px;
+        height: 270px;
+        border-radius: 10px; }
   #seccion3 {
     height: auto; }
     #seccion3 .cardsIndex {

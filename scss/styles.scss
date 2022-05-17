@@ -1,9 +1,11 @@
 body{
   font-family: Bebas Neue;
+  overflow-x: hidden;
 }
 
 #bodyContacto, #bodyCatalogo{
-  background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg);
+  background-image: url(../img/wallpaper.jpg);
+  background-size: cover;
 }
 
 /* --------------- NAVBAR --------------- */
@@ -22,7 +24,7 @@ body{
 }
 
 @mixin parallax{
-  background: #fff fixed no-repeat 50% 50%;
+  background: fixed no-repeat 50% 50%;
   background-size: cover;
   width: 100%;
   padding: 0;
@@ -45,17 +47,23 @@ body{
 }
 
 #seccion1{
-  background-image: url(https://cdn.foodandwineespanol.com/2020/07/congreso-virtual-cerveceras-latam.jpg);
+  height: 40%;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
-  color: whitesmoke;
+  color: rgb(255, 255, 255);
+  div{
+    transition: all 0.5s;
+  }
     .envios{
       display: flex;
       align-items: center;
       svg{
         margin-right: 16px;
+      }
+      &:hover{
+        color: gray;
       }
     }
     .transferencia{
@@ -64,23 +72,43 @@ body{
       svg{
         margin-right: 16px;
       }
+      &:hover{
+        color: gray;
+      }
     }
     .mercadopago{
       display: flex;
+      img{
+        height: 100px;
+      }
     }
   }
 
 
 #seccion2{
-  background-image: url(https://cdn.pixabay.com/photo/2015/06/30/18/36/st-826688_960_720.jpg);
+  background-image: url(https://cdn.foodandwineespanol.com/2020/07/congreso-virtual-cerveceras-latam.jpg);
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-    img{
-      width: 350px;
-      height: 350px;
-      border-radius: 10px;
-      margin: 1cm;
+  align-content: center;
+  justify-content: center;
+    .imgVasos{
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      .vasoBirra1 img{
+        transition: 1s;
+      }
+      .vasoBirra2 img{
+        transition: 2s;
+      }
+      .vasoBirra3 img{
+        transition: 3s;
+      }
+      img{
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+      }
     }
 }
 
@@ -98,6 +126,18 @@ body{
 
 
 /* --------------- CATALOGO DESKTOP --------------- */
+
+.titulo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  color: rgb(136, 91, 138);
+  background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg);
+  background-size: cover;
+  height: 150px;
+  padding: 30px;
+}
 
 @mixin catalogo{
   display: flex;
@@ -143,7 +183,7 @@ body{
         .flip-box-front {
           @include flipboxes;
           border-radius: 30px;
-          box-shadow: 0px 0px 10px 3px rgb(235, 226, 226);
+          box-shadow: 0px 0px 10px 3px rgb(233, 76, 76);
         }
         .flip-box-back {
           @include flipboxes;
@@ -153,7 +193,7 @@ body{
           transform: rotateY(180deg);
           border-radius: 30px;
           opacity: 0.9;
-          box-shadow: 0px 0px 30px 5px rgb(209, 189, 189);
+          box-shadow: 0px 0px 30px 5px rgb(236, 78, 78);
           p{
             padding-left: 10px;
             padding-right: 10px;
@@ -227,19 +267,6 @@ $fontcolor: (
   transform: rotateY(180deg);
 }
 
-.titulo{
-  display:flex;
-  background-color: black;
-  justify-content: center;
-  align-items: center;
-  color: whitesmoke;
-  opacity: 0.6;
-  margin-top: 20px;
-      h2{
-          margin-top: 10px;
-      }
-}
-
 .catalogoExtra{
   @include catalogo;
       img {
@@ -264,9 +291,10 @@ $fontcolor: (
   align-items: center;
   font-size: 60px;
   color: rgb(136, 91, 138);
-  background: linear-gradient(to left, rgb(148, 73, 73), rgb(68, 16, 16));
-  height: 90px;
-  padding: 70px;
+  background-image: url(../img/wallpaper.jpg);
+  background-size: cover;
+  height: 150px;
+  padding: 30px;
 }
 
 .mainTexto{
@@ -384,6 +412,9 @@ $fontcolor: (
       &:hover{
         background-color: rgb(54, 4, 4);
       }
+      &:active{
+        background: linear-gradient(to bottom, rgb(219, 65, 65), rgb(54, 4, 4));
+      }
     }
   
     .botonLimpiar{
@@ -392,6 +423,9 @@ $fontcolor: (
       color:rgb(54, 4, 4);
       &:hover{
         background-color: rgb(207, 188, 188);
+      }
+      &:active{
+        background: linear-gradient(to bottom, whitesmoke, rgb(207, 188, 188));
       }
     }
 }
@@ -474,25 +508,29 @@ $fontcolor: (
 
     #seccion1{
       flex-direction: column;
+      height: 100%;
     }
 
     #seccion2{
       height: auto;
-      flex-direction: column;
-      gap: 16px;
-      img{
-        margin-top: 1cm;
-        width: 200px;
-        height: 200px;
+      display: flex;
+      justify-content: center;
+      .imgVasos{
+        height: 1000px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        img{
+          width: 200px;
+          height: 200px;
+          border-radius: 10px;
+        }
       }
     }
 
     #seccion3{
       height: auto;
     }
-
-
-
 
     /* -------- CATALOGO MOBILE -------- */
   
@@ -540,11 +578,24 @@ $fontcolor: (
 
   #seccion1{
     flex-direction: column;
+    height: 100%;
   }
 
   #seccion2{
     height: auto;
-    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    .imgVasos{
+      height: 1000px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      img{
+        width: 270px;
+        height: 270px;
+        border-radius: 10px;
+      }
+    }
   }
 
 
