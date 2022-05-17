@@ -140,6 +140,7 @@ body{
   background-size: cover;
   height: 150px;
   padding: 30px;
+  margin-bottom: 1em;
 }
 
 @mixin catalogo{
@@ -154,6 +155,7 @@ body{
   flex-direction: row;
   flex-wrap: wrap;
   font-family: 'Chakra Petch', sans-serif;
+  margin-bottom: 2cm;
       img {
           width: 230px;
           height: 380px;

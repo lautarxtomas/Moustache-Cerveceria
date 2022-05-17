@@ -111,7 +111,8 @@ body {
   background-image: url(https://static.vecteezy.com/system/resources/previews/000/696/278/large_2x/textured-black-background-vector.jpg);
   background-size: cover;
   height: 150px;
-  padding: 30px; }
+  padding: 30px;
+  margin-bottom: 1em; }
 
 .flex-catalogo {
   display: flex;
@@ -120,7 +121,8 @@ body {
   gap: 60px;
   flex-direction: row;
   flex-wrap: wrap;
-  font-family: 'Chakra Petch', sans-serif; }
+  font-family: 'Chakra Petch', sans-serif;
+  margin-bottom: 2cm; }
   .flex-catalogo img {
     width: 230px;
     height: 380px;
